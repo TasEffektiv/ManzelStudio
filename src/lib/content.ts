@@ -211,9 +211,15 @@ export const blogPosts = [
     image: img(
       "/resources/c0173968/blog-post/post-25/300-EssentialStepstoPerformanArchitecturalSiteAnalysisforaNewBuildingProject.png"
     ),
+    imageLarge: img(
+      "/resources/c0173968/blog-post/post-25/450-EssentialStepstoPerformanArchitecturalSiteAnalysisforaNewBuildingProject.png"
+    ),
     date: "Tue, 14 Jul 2026",
     excerpt:
       "Every successful building begins with a thorough understanding of the site. Before sketches, floor plans, or 3D mo...",
+    excerptLong:
+      "Every successful building begins with a thorough understanding of the site. Before sketches, floor plans, or 3D models are developed, architects and build...",
+    categories: ["studio-news", "commercial-design", "sustainable-design", "residential-design"],
   },
   {
     title:
@@ -222,9 +228,21 @@ export const blogPosts = [
     image: img(
       "/resources/c0173968/blog-post/post-22/300-BuildingDesignervsArchitectvsDraftsman.png"
     ),
+    imageLarge: img(
+      "/resources/c0173968/blog-post/post-22/450-BuildingDesignervsArchitectvsDraftsman.png"
+    ),
     date: "Wed, 24 Jun 2026",
     excerpt:
       "If you're planning a new home, renovation, extension, townhouse development or commercial project, one of the first deci...",
+    excerptLong:
+      "If you're planning a new home, renovation, extension, townhouse development or commercial project, one of the first decisions you'll need to make is whether to ...",
+    categories: [
+      "industry-insights",
+      "commercial-design",
+      "sustainable-design",
+      "planning-permits",
+      "residential-design",
+    ],
   },
   {
     title:
@@ -233,9 +251,15 @@ export const blogPosts = [
     image: img(
       "/resources/c0173968/blog-post/post-19/300-commercial-building-design-trends-melbourne(1).png"
     ),
+    imageLarge: img(
+      "/resources/c0173968/blog-post/post-19/450-commercial-building-design-trends-melbourne(1).png"
+    ),
     date: "Sun, 14 Jun 2026",
     excerpt:
       "Commercial buildings have evolved significantly over the past decade. Today's businesses require spaces that do more tha...",
+    excerptLong:
+      "Commercial buildings have evolved significantly over the past decade. Today's businesses require spaces that do more than provide shelter - they need environmen...",
+    categories: ["commercial-design", "sustainable-design", "planning-permits"],
   },
   {
     title: "Manzel Studio Launches Purpose Driven Building Design Services in Melbourne",
@@ -243,17 +267,84 @@ export const blogPosts = [
     image: img(
       "/resources/c0173968/blog-post/post-16/300-ManzelStudioLaunchesPurpose-DrivenBuildingDesignServicesinMelbourne.png"
     ),
+    imageLarge: img(
+      "/resources/c0173968/blog-post/post-16/450-ManzelStudioLaunchesPurpose-DrivenBuildingDesignServicesinMelbourne.png"
+    ),
     date: "Wed, 13 May 2026",
     excerpt:
       "Manzel Studio provides purpose-driven building design services in Melbourne for residential, commercial and health space...",
+    excerptLong:
+      "Manzel Studio provides purpose-driven building design services in Melbourne for residential, commercial and health space projects. Based in Preston, the studio ...",
+    categories: ["studio-news", "commercial-design", "sustainable-design", "residential-design"],
   },
   {
     title: "Designing a Home on a Narrow Block",
     href: "/blog/designing-a-home-on-a-narrow-block",
     image: img("/resources/c0173968/blog-post/post-13/300-600-NarrowBlock(1).png"),
+    imageLarge: img("/resources/c0173968/blog-post/post-13/450-600-NarrowBlock(1).png"),
     date: "Tue, 12 May 2026",
     excerpt:
       "If you've bought, inherited, or are eyeing a long, narrow block, you've probably been told it is \"tricky.\" Maybe even th...",
+    excerptLong:
+      "If you've bought, inherited, or are eyeing a long, narrow block, you've probably been told it is \"tricky.\" Maybe even that you'll have to compromise. We don't a...",
+    categories: ["planning-permits", "residential-design"],
+  },
+  {
+    title: "How to Get a Planning Permit Approved Faster",
+    href: "/blog/how-to-get-a-planning-permit-approved-faster",
+    image: img("/resources/c0173968/blog-post/post-10/300-HowtoGetaPlanningPermitApprovedFaster.png"),
+    imageLarge: img("/resources/c0173968/blog-post/post-10/450-HowtoGetaPlanningPermitApprovedFaster.png"),
+    date: "Sun, 10 May 2026",
+    excerpt:
+      "If you are planning a new home, an extension, a renovation, a multi-unit development, or a commercial project, the planning permit process can feel slow and unc...",
+    excerptLong:
+      "If you are planning a new home, an extension, a renovation, a multi-unit development, or a commercial project, the planning permit process can feel slow and unc...",
+    categories: ["commercial-design", "planning-permits"],
+  },
+];
+
+export const blogCategories = [
+  {
+    key: "planning-permits",
+    label: "Planning & Permits",
+    metaTitle: "Planning & Building Permits Tips & Guide | Manzel Studio",
+    metaDescription:
+      "Read practical guides on planning permits, council approvals and building design documentation for homes, renovations and commercial projects.",
+  },
+  {
+    key: "residential-design",
+    label: "Residential Design",
+    metaTitle: "Residential Design Ideas | Industry Trends | Manzel Studio",
+    metaDescription:
+      "Explore residential design insights for new homes, renovations and extensions, with practical ideas for smarter layouts and better living spaces.",
+  },
+  {
+    key: "commercial-design",
+    label: "Commercial Design",
+    metaTitle: "Commercial Design Insights | Industry Trends | Manzel Studio",
+    metaDescription:
+      "Discover commercial design articles covering functional layouts, project planning, approvals and practical building design considerations.",
+  },
+  {
+    key: "sustainable-design",
+    label: "Sustainable Design",
+    metaTitle: "Sustainable Design Ideas | Insights & Guides | Manzel Studio",
+    metaDescription:
+      "Learn about sustainable design strategies for homes and buildings, including energy efficiency, comfort, materials and long-term performance.",
+  },
+  {
+    key: "industry-insights",
+    label: "Industry Insights",
+    metaTitle: "Building Design Industry Insights | Manzel Studio",
+    metaDescription:
+      "Stay informed with building design industry insights, trends, approval updates and practical advice for residential and commercial projects.",
+  },
+  {
+    key: "studio-news",
+    label: "Studio News",
+    metaTitle: "Find All Studio News and Updates | Manzel Studio",
+    metaDescription:
+      "Read the latest Manzel Studio news, project updates, service announcements and stories from our building design team in Melbourne.",
   },
 ];
 
@@ -1727,6 +1818,14 @@ export const contactInfo = {
 
 export const contactMapEmbed =
   "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3154.853074053348!2d145.007563!3d-37.746591!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6472581144e63%3A0xb88be8542ff317cc!2sManzel%20Studio%20Pty%20Ltd!5e0!3m2!1sen!2sau!4v1777867550353!5m2!1sen!2sau";
+
+// ===== Blog page =====
+
+export const blogHero = {
+  image: img("/template/c0173968/images/about-page-banner.png"),
+  title: "Studio Blog",
+  tagline: "Insights, guides, and stories on designing better homes, developments, and spaces across Victoria.",
+};
 
 export const logo = img(
   "/resources/c0173968/image-widget/9C7BE7E5-E401-4782-9249-4FF1D2832147/header-logo.svg"

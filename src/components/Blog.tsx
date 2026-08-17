@@ -27,7 +27,7 @@ export default function Blog() {
             >
               <div className="group">
                 <a href={post.href} className="block">
-                  <div className="relative aspect-[413/250] w-full overflow-hidden">
+                  <div className="relative aspect-video w-full overflow-hidden">
                     <Image
                       src={post.image}
                       alt={post.title}
