@@ -1,0 +1,250 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --ink: #1f1f21;
+  --ink-2: #4b4d51;
+  --muted: #7a7a7d;
+  --line: #e7e4df;
+  --paper: #fbfbfb;
+  --aubergine: #1f1f21;
+  --max: 1440px;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-paper: var(--paper);
+  --color-aubergine: var(--aubergine);
+  --font-sans: var(--font-albert-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-albert-sans), sans-serif;
+}
+
+/* Scroll-reveal: fade up, matching the source site's fade/bottom entrance */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* If JS never runs, don't hide content behind a scroll animation forever. */
+@media (scripting: none) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.btn-fill {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--ink);
+  color: #fff;
+  padding: 16px 30px;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.25s;
+}
+.btn-fill:hover {
+  background: var(--aubergine);
+  opacity: 0.85;
+}
+.btn-fill .arr {
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  position: relative;
+  flex-shrink: 0;
+}
+.btn-fill .arr::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -3px;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--aubergine);
+  font-weight: 500;
+}
+
+::selection {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* About section heading sizes — matched to the live site's exact breakpoint
+   schedule (55/45/40/36/28px), not a generic sm/md/lg guess. */
+.about-heading {
+  font-size: 70px;
+  line-height: 78px;
+}
+@media (max-width: 1440px) {
+  .about-heading {
+    font-size: 55px;
+    line-height: 66px;
+  }
+}
+@media (max-width: 1280px) {
+  .about-heading {
+    font-size: 45px;
+    line-height: 55px;
+  }
+}
+@media (max-width: 1200px) {
+  .about-heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .about-heading {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .about-heading {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+.about-subheading {
+  font-size: 32px;
+  line-height: 46px;
+}
+@media (max-width: 1200px) {
+  .about-subheading {
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .about-subheading {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 767px) {
+  .about-subheading {
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
+
+/* Sectors section — same exact breakpoint schedule the live site uses. */
+.sector-heading {
+  font-size: 76px;
+  line-height: 88px;
+}
+@media (max-width: 1440px) {
+  .sector-heading {
+    font-size: 55px;
+    line-height: 66px;
+  }
+}
+@media (max-width: 1200px) {
+  .sector-heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .sector-heading {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .sector-heading {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+.blog-heading {
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 1440px) {
+  .blog-heading {
+    font-size: 55px;
+    line-height: 66px;
+    letter-spacing: -0.044em;
+  }
+}
+@media (max-width: 1200px) {
+  .blog-heading {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .blog-heading {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .blog-heading {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+.sector-title {
+  font-size: 44px;
+  line-height: 60px;
+}
+@media (max-width: 1440px) {
+  .sector-title {
+    font-size: 36px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 1200px) {
+  .sector-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .sector-title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .sector-title {
+    font-size: 28px;
+    line-height: 60px;
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Contact — Manzel Studio</title>
+<meta name="robots" content="noindex" />
+</head>
+<body>
+<!--
+  This is a static shadow copy of the "contact" form rendered by
+  src/components/ContactSection.tsx. Netlify's form-detection bot only
+  scans plain HTML at deploy time and cannot see the JS-rendered version,
+  so this file exists purely so Netlify registers the form and its fields.
+  It is not meant to be visited by users. Keep field `name` attributes in
+  sync with the React form.
+-->
+<form name="contact" method="POST" data-netlify="true" netlify="true" data-netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="contact" />
+  <p style="position:absolute; left:-9999px;">
+    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+  </p>
+
+  <label>First Name <input type="text" name="firstName" /></label>
+  <label>Last Name <input type="text" name="lastName" /></label>
+  <label>Email Address <input type="email" name="email" /></label>
+  <label>Phone Number <input type="tel" name="phone" /></label>
+  <label>Address of Site <input type="text" name="address" /></label>
+  <label>How Did You Hear About Us? <input type="text" name="hearAbout" /></label>
+  <label>Message <textarea name="message"></textarea></label>
+
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>
