@@ -19,6 +19,37 @@ type Post = {
 
 const SITE_URL = "https://www.manzelstudio.com";
 
+function renderRich(text: string): React.ReactNode[] {
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const nodes: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) nodes.push(text.slice(lastIndex, match.index));
+    const [, label, href] = match;
+    const isInternal = href.startsWith("/") || href.includes("manzelstudio.com");
+    nodes.push(
+      isInternal ? (
+        <Link
+          key={key++}
+          href={href.replace(/^https?:\/\/(www\.)?manzelstudio\.com/, "") || "/"}
+          className="underline underline-offset-2 hover:opacity-70"
+        >
+          {label}
+        </Link>
+      ) : (
+        <a key={key++} href={href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70">
+          {label}
+        </a>
+      )
+    );
+    lastIndex = regex.lastIndex;
+  }
+  if (lastIndex < text.length) nodes.push(text.slice(lastIndex));
+  return nodes;
+}
+
 export default function BlogPost({ post, article }: { post: Post; article: Article }) {
   const shareUrl = `${SITE_URL}${post.href}`;
   const encodedUrl = encodeURIComponent(shareUrl);
@@ -109,7 +140,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                 <div>
                   {article.intro.map((p, i) => (
                     <p key={i} className="mb-5 text-[16px] leading-[28px] text-black">
-                      {p}
+                      {renderRich(p)}
                     </p>
                   ))}
                 </div>
@@ -144,11 +175,11 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                       (Array.isArray(section.leadIn) ? (
                         section.leadIn.map((p, k) => (
                           <p key={k} className="mb-3 text-[16px] leading-[28px] text-black">
-                            {p}
+                            {renderRich(p)}
                           </p>
                         ))
                       ) : (
-                        <p className="mb-3 text-[16px] leading-[28px] text-black">{section.leadIn}</p>
+                        <p className="mb-3 text-[16px] leading-[28px] text-black">{renderRich(section.leadIn)}</p>
                       ))}
                     {section.table && (
                       <div className="mb-4 overflow-x-auto">
@@ -188,21 +219,21 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                               </h4>
                             )}
                             {col.label && (
-                              <p className="mb-2 text-[16px] font-semibold leading-[1.3] text-black">{col.label}</p>
+                              <p className="mb-2 text-[16px] font-semibold leading-[1.3] text-black">{renderRich(col.label)}</p>
                             )}
-                            {col.sub && <p className="mb-2 text-[16px] leading-[28px] text-black">{col.sub}</p>}
+                            {col.sub && <p className="mb-2 text-[16px] leading-[28px] text-black">{renderRich(col.sub)}</p>}
                             {col.list && (
                               <ul className="mb-2 list-disc space-y-2 pl-5">
                                 {col.list.map((item) => (
                                   <li key={item} className="text-[15px] leading-[27px] text-black">
-                                    {item}
+                                    {renderRich(item)}
                                   </li>
                                 ))}
                               </ul>
                             )}
                             {col.paragraphs?.map((p, pi) => (
                               <p key={pi} className="mt-3 text-[16px] leading-[28px] text-black">
-                                {p}
+                                {renderRich(p)}
                               </p>
                             ))}
                           </div>
@@ -216,7 +247,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                             <h4 className="mb-2 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-black md:text-[21px] md:leading-[38px]">
                               {sub.heading}
                             </h4>
-                            <p className="text-[16px] leading-[28px] text-black">{sub.paragraph}</p>
+                            <p className="text-[16px] leading-[28px] text-black">{renderRich(sub.paragraph)}</p>
                           </div>
                         ))}
                       </div>
@@ -226,7 +257,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                         <ol className="mb-2 list-decimal space-y-2 pl-5">
                           {section.list.map((item) => (
                             <li key={item} className="text-[15px] leading-[27px] text-black">
-                              {item}
+                              {renderRich(item)}
                             </li>
                           ))}
                         </ol>
@@ -234,7 +265,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                         <ul className="mb-2 list-disc space-y-2 pl-5">
                           {section.list.map((item) => (
                             <li key={item} className="text-[15px] leading-[27px] text-black">
-                              {item}
+                              {renderRich(item)}
                             </li>
                           ))}
                         </ul>
@@ -245,12 +276,12 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                           {section.groups.map((group) => (
                             <div key={group.label}>
                               <p className="mb-2 text-[14px] font-semibold uppercase tracking-[0.02em] text-black">
-                                {group.label}
+                                {renderRich(group.label)}
                               </p>
                               <ul className="space-y-1.5 pl-5">
                                 {group.items.map((item) => (
                                   <li key={item} className="list-disc text-[15px] leading-[27px] text-black">
-                                    {item}
+                                    {renderRich(item)}
                                   </li>
                                 ))}
                               </ul>
@@ -262,12 +293,12 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                           {section.groups.map((group) => (
                             <div key={group.label}>
                               <p className="mb-2 text-[16px] font-semibold leading-[1.3] text-black">
-                                {group.label}
+                                {renderRich(group.label)}
                               </p>
                               <ul className="mb-2 list-disc space-y-2 pl-5">
                                 {group.items.map((item) => (
                                   <li key={item} className="text-[15px] leading-[27px] text-black">
-                                    {item}
+                                    {renderRich(item)}
                                   </li>
                                 ))}
                               </ul>
@@ -306,7 +337,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                               : ""
                           } mb-4 text-[16px] leading-[28px] text-black`}
                         >
-                          {p}
+                          {renderRich(p)}
                         </p>
                       ))}
                     </div>
@@ -349,7 +380,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                 </h2>
                 {article.conclusion.map((p, i) => (
                   <p key={i} className="mb-4 text-[16px] leading-[28px] text-black">
-                    {p}
+                    {renderRich(p)}
                   </p>
                 ))}
               </div>

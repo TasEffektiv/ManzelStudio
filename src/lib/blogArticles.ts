@@ -46,14 +46,15 @@ export const blogArticles: Record<string, Article> = {
   "essential-steps-architectural-site-analysis": {
     slug: "essential-steps-architectural-site-analysis",
     intro: [
-      "Every successful building begins with a thorough understanding of the site. Before sketches, floor plans, or 3D models are developed, architects and building designers need to know how a block behaves — its slope, its light, its access, its constraints — so the design responds to reality rather than fighting it.",
-      "A proper site analysis is the difference between a design that feels effortless once it's built and one that runs into costly surprises during permits or construction. Here's how we approach it, and what we recommend any homeowner or developer ask their designer about before concepts begin.",
+      "Every successful building begins with a thorough understanding of the site. Before sketches, floor plans, or 3D models are developed, architects and building designers must carefully evaluate the land where the project will be built. This process, known as an architectural site analysis, helps identify opportunities, constraints, environmental conditions, and regulatory requirements that influence the final design.",
+      "Whether you're planning a custom [home](/residential-building-design), [commercial development](/commercial-building-design), [medical spaces](/health-space-design), or a multi-unit project, conducting a detailed site analysis can save time, reduce construction costs, and prevent costly design revisions later in the process.",
+      "This guide explains the essential steps involved in performing a [professional architectural site analysis](/site-assessment) and why it is one of the most important stages of any new building project.",
     ],
     sections: [
       {
         heading: "Why Site Analysis Is Important in Building Design",
         paragraphs: [
-          "A thorough site analysis lays the groundwork for a practical and well-informed building design. It shapes decisions long before a single wall is drawn, and it protects the project from expensive rework later on.",
+          "A thorough site analysis lays the groundwork for a practical and well-informed building design. It enables [architects and building designers](/blog/building-designer-vs-architect-vs-draftsman-australia) to make decisions based on real site conditions rather than assumptions, helping minimise design revisions and construction challenges. By identifying opportunities and constraints early, the project can progress more efficiently while delivering a better outcome for both the client and future occupants.",
         ],
         list: [
           "Designs a building suited to the land, not a generic layout dropped onto it",
@@ -280,6 +281,7 @@ export const blogArticles: Record<string, Article> = {
       },
       {
         heading: "Tools Commonly Used for Architectural Site Analysis",
+        leadIn: "[Modern building designers](/) and architects use a combination of traditional and digital tools, including:",
         list: [
           "Site surveys",
           "GPS equipment",
@@ -310,7 +312,7 @@ export const blogArticles: Record<string, Article> = {
       },
     ],
     conclusion: [
-      "Site analysis is the foundation upon which every successful building project is built. Getting it right early gives a design room to respond to the land, the client's goals and council requirements together — rather than treating any one of them as an afterthought.",
+      "Investing time in a detailed site analysis reduces risks, supports better design decisions, and helps avoid [costly issues during construction](https://www.ssos.net.au/blog/construction-site-safety-planning-and-practice-guide). Whether the project involves a new home, commercial development, or a mixed-use building, thoroughly understanding the site is one of the smartest investments made before the design process begins.",
     ],
     faqs: [
       {
@@ -347,18 +349,19 @@ export const blogArticles: Record<string, Article> = {
     sections: [
       {
         heading: "What Does a Building Designer Do?",
-        leadIn: "A building designer is a design professional who specialises in creating functional, compliant and buildable residential and commercial spaces.",
+        leadIn:
+          "A [building designer](/) is a design professional who specialises in creating functional, compliant and buildable residential and commercial spaces.",
         columns: [
           {
             label: "Building designers typically work on:",
             list: [
-              "New homes",
+              "[New homes](/residential-building-design)",
               "Home renovations",
               "Home extensions",
               "Dual occupancy developments",
               "Townhouse developments",
-              "Commercial fit-outs",
-              "Health spaces",
+              "[Commercial fit-outs](/commercial-building-design)",
+              "[Health spaces](/health-space-design)",
               "Mixed-use developments",
             ],
             paragraphs: [
@@ -442,7 +445,7 @@ export const blogArticles: Record<string, Article> = {
           },
         ],
         paragraphs: [
-          "Modern drafting professionals commonly use CAD (Computer-Aided Design) and BIM (Building Information Modelling) software to prepare detailed building documentation.",
+          "Modern drafting professionals commonly use [CAD](https://www.autodesk.com/au/solutions/cad-software) (Computer-Aided Design) and [BIM](https://www.bim.com/) (Building Information Modelling) software to prepare detailed building documentation.",
         ],
       },
       {
@@ -581,7 +584,7 @@ export const blogArticles: Record<string, Article> = {
       {
         heading: "What About Melbourne and Victorian Projects?",
         leadIn: [
-          "If you are planning a project in Melbourne or regional Victoria, it is important to work with a professional who understands local planning controls and approval processes.",
+          "If you are [planning a project in Melbourne](/blog/building-design-services-melbourne) or regional Victoria, it is important to work with a professional who understands local planning controls and approval processes.",
           "Key considerations may include:",
         ],
         list: [
