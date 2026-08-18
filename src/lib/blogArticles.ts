@@ -1072,72 +1072,134 @@ export const blogArticles: Record<string, Article> = {
   "how-to-get-a-planning-permit-approved-faster": {
     slug: "how-to-get-a-planning-permit-approved-faster",
     intro: [
-      "If you are planning a new home, an extension, a renovation, a multi-unit development, or a commercial project, the planning permit process can feel slow and uncertain. In most cases, delays come down to incomplete submissions or a design that isn't yet aligned with local requirements — not fundamental feasibility issues. Success depends primarily on thorough preparation.",
+      "If you are planning a new home, an extension, a renovation, a multi-unit development, or a commercial project, the planning permit process can feel slow and uncertain.",
+      "Many applications take longer than expected, not because the project is impossible, but because the submission is incomplete, poorly coordinated, or not aligned with local planning requirements from the start.",
+      "A faster approval process usually comes down to preparation. The more clearly a proposal responds to council requirements, neighbourhood character, site constraints, and planning policy, the easier it is for a planner to assess.",
+      "This article outlines practical steps to reduce delays and improve the chances of a smoother planning permit process.",
     ],
     sections: [
       {
         heading: "Why Planning Permits Often Take Longer Than Expected",
-        list: [
-          "Incomplete documentation that prevents council from properly assessing the application",
-          "Neighbourhood character considerations around height, setbacks and materials",
-          "Site constraints such as heritage overlays, vegetation controls, flooding or easements",
-          "External factors — council workload, referral authorities and public objections",
+        paragraphs: [
+          "Planning permits can be delayed for several reasons.",
+          "The first is incomplete documentation. [Councils](https://www.planning.vic.gov.au/guides-and-resources/guides/guide-to-victorias-planning-system/planning-permits) need sufficient information to understand the proposal, assess its impact, and confirm whether it complies with the relevant planning scheme. Missing drawings, unclear reports, or inconsistent information can quickly trigger requests for further information.",
+          "The second issue is neighbourhood character. Even when a design is technically compliant, council may still assess how it responds to the surrounding area, including building height, setbacks, overlooking, overshadowing, landscaping, materials, and street presentation.",
+          "The third issue is site constraints. Heritage overlays, vegetation controls, flood considerations, easements, access issues, and environmental requirements can all affect what is possible. If these are discovered late, they can force redesigns and extend the approval timeframe.",
+          "The fourth issue is timing. Council workloads, public holidays, referral authorities, neighbour objections, and internal review processes can all influence how long an application takes.",
         ],
       },
       {
         heading: "A Better Approach to Planning Permit Applications",
         paragraphs: [
-          "The most reliable approach is to understand the planning controls that apply to a site before the design is finalised, then shape the concept around those requirements from the start — rather than designing first and adjusting for planning later.",
+          "A strong planning permit strategy begins before the design is finalised.",
+          "Instead of designing first and checking compliance later, the best approach is to understand the planning controls early and shape the design around them.",
+          "This reduces the risk of major changes later in the process and gives the application a stronger foundation from the beginning.",
         ],
       },
       {
-        heading: "Five Key Steps to a Smoother Approval",
-        ordered: true,
-        list: [
-          "Feasibility review — identify zoning, overlays, height limits, parking requirements and referral triggers upfront",
-          "Design for approval — build planning considerations into the design itself, addressing massing, overlooking, shadowing and streetscape response",
-          "Complete submission package — include architectural drawings, site analysis, shadow diagrams, planning reports, landscape concepts and any specialist documentation required",
-          "Clear documentation — ensure drawings and reports are consistent, clearly labelled, and directly address the relevant planning controls",
-          "Responsive communication — respond promptly to council requests and make small design adjustments early rather than late",
+        heading: "1. Start With a Feasibility Review",
+        paragraphs: [
+          "Before preparing a full design, complete a feasibility review of the site.",
+          "This should identify the zoning, overlays, ResCode or local planning requirements, neighbourhood character considerations, setbacks, height limits, private open space requirements, overlooking rules, parking requirements, and any referral triggers.",
+          "A feasibility review helps answer the most important question early: what is likely to be supported on this site?",
+          "It can also reveal whether a proposal needs to be simplified, adjusted, or supported with additional reports before it goes to council.",
         ],
       },
       {
-        heading: "What Applicants Can Do",
-        list: [
-          "Make key decisions early to avoid design revisions mid-process",
-          "Provide site documentation — titles, surveys and easement details — as early as possible",
-          "Keep timeline expectations realistic given council workload and project complexity",
+        heading: "2. Design for Approval, Not Just Appearance",
+        paragraphs: [
+          "A good design should be visually strong, functional, and aligned with planning expectations.",
+          "Planning issues should be considered during the design process, not after the design is finished. This includes building massing, site coverage, overlooking, overshadowing, streetscape response, landscaping, access, waste storage, and neighbouring amenity.",
+          "When the design is shaped around these considerations from the start, it is less likely to attract major objections or require extensive redesign during [assessment](/site-assessment).",
         ],
       },
       {
-        heading: "A Typical Staged Process",
-        ordered: true,
-        list: [
-          "Site review and planning feasibility",
-          "Concept design",
-          "Documentation and reports",
-          "Council assessment",
-          "Response and refinement",
-          "Decision",
+        heading: "3. Prepare a Complete Submission Package",
+        paragraphs: [
+          "A complete application gives council the information it needs to assess the proposal efficiently.",
+          "Depending on the project, this may include architectural drawings, site analysis, shadow diagrams, overlooking diagrams, a planning report, landscape concept plans, drainage information, traffic or parking reports, arborist reports, heritage advice, or other specialist documentation.",
+          "The goal is to avoid unnecessary requests for further information. Every missing item can add weeks to the process.",
+        ],
+      },
+      {
+        heading: "4. Make the Proposal Easy to Assess",
+        paragraphs: [
+          "Council planners assess many applications at once. Clear documentation helps them understand the project quickly.",
+          "Drawings should be consistent, labelled properly, and easy to read. Reports should directly address the relevant planning controls. Any areas of non-compliance should be explained clearly, with a strong planning rationale.",
+          "A well-organised submission can make a significant difference to how smoothly the application progresses.",
+        ],
+      },
+      {
+        heading: "5. Respond Quickly During Assessment",
+        paragraphs: [
+          "Once an application is lodged, communication matters.",
+          "If council requests more information, respond promptly and completely. If concerns are raised, address them early rather than waiting until the end of the process.",
+          "In some cases, small design changes can resolve planning concerns before they become major objections. This may include adjusting a setback, relocating a window, modifying a façade, reducing overlooking, or refining landscaping.",
+          "A proactive response can help keep the application moving.",
+        ],
+      },
+      {
+        heading: "What Applicants Can Do to Help",
+        paragraphs: [
+          "Clients and property owners also play an important role in the planning process.",
+          "Make decisions early and avoid frequent design changes once documentation is underway. Every major change can affect drawings, reports, consultant input, and the overall timeline.",
+          "Provide site information as soon as possible, including title documents, existing plans, survey information, easement details, previous permits, and any known site issues.",
+          "Be realistic about the process. A fast approval depends on the quality of the application, the complexity of the site, council workload, and whether objections or referral requirements arise.",
+        ],
+      },
+      {
+        heading: "What a Faster Planning Permit Process Looks Like",
+        leadIn: "While every project is different, a well-managed planning process usually follows a clear sequence:",
+        subsections: [
+          {
+            heading: "Stage 1: Site review and planning feasibility",
+            paragraph: "The planning controls, overlays, constraints, and approval risks are identified early.",
+          },
+          {
+            heading: "Stage 2: Concept design",
+            paragraph: "The design is developed with council requirements and site conditions in mind.",
+          },
+          {
+            heading: "Stage 3: Documentation and reports",
+            paragraph: "Architectural drawings and supporting documents are prepared for lodgement.",
+          },
+          {
+            heading: "Stage 4: Council assessment",
+            paragraph: "Council reviews the application and may request further information or clarification.",
+          },
+          {
+            heading: "Stage 5: Response and refinement",
+            paragraph: "Any council feedback, referral comments, or objections are addressed.",
+          },
+          {
+            heading: "Stage 6: Decision",
+            paragraph: "Council issues an approval, conditional approval, refusal, or the matter proceeds to further review if required.",
+          },
         ],
       },
     ],
+    conclusion: [
+      "A planning permit approval is rarely about luck. It usually depends on good preparation, clear documentation, and a design that responds properly to the site and its planning context.",
+      "The earlier planning requirements are considered, the smoother the process is likely to be.",
+      "For homeowners, developers, and business owners, the key is to start with the right advice, understand the site constraints, prepare a complete submission, and keep communication open [throughout the assessment process](/blog/essential-steps-architectural-site-analysis).",
+      "A well-prepared application will not guarantee instant approval, but it can significantly reduce avoidable delays and give the project the best chance of moving forward efficiently.",
+    ],
     faqs: [
       {
-        q: "How long does a planning permit take to approve?",
-        a: "Timeframes vary depending on project complexity and council workload, but a complete, well-prepared submission consistently moves faster than one that needs follow-up requests.",
+        q: "How long does a planning permit take in Melbourne?",
+        a: "The timeframe depends on the project, council workload, site constraints, referral requirements and whether objections are received. A complete and clearly documented application can help minimise avoidable delays, but it cannot guarantee a particular approval date.",
       },
       {
-        q: "What are the most common causes of planning permit delays?",
-        a: "Missing documents, inconsistent drawings, and objections from neighbouring properties are the most common causes we see.",
+        q: "What commonly delays a planning permit application?",
+        a: "Common causes include missing documents, inconsistent drawings, unresolved planning non-compliance, late consultant reports, neighbour objections and slow responses to council requests.",
       },
       {
-        q: "Can a building designer help with planning permit applications?",
-        a: "Yes — reviewing site constraints, shaping the design around planning controls, and coordinating documentation are all core parts of the service.",
+        q: "Can a building designer help with a planning permit?",
+        a: "Yes. A [building designer](/) can review site constraints, develop a design that responds to planning controls, coordinate supporting documentation and assist with council feedback during assessment.",
       },
       {
-        q: "What's the difference between a planning permit and a building permit?",
-        a: "A planning permit deals with land use and how a proposal fits within council planning controls, while a building permit confirms the design complies with the National Construction Code and is safe to build.",
+        q: "Is a planning permit the same as a building permit?",
+        a: "No. A planning permit considers how land may be used or developed, while a building permit confirms that proposed construction complies with applicable building requirements. Some projects require both. This distinction aligns with official Victorian guidance, which treats planning approvals as a separate process with different pathways and requirements. [Planning Victoria](https://www.planning.vic.gov.au/planning-approvals) and the [City of Melbourne](https://www.melbourne.vic.gov.au/planning-permit-applications) provide further official guidance.",
       },
     ],
   },
