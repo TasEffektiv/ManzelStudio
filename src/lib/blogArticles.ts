@@ -6,6 +6,8 @@ export type ArticleColumn = {
   sub?: string;
   list?: string[];
   paragraphs?: string[];
+  subsections?: ArticleSubsection[];
+  image?: { src: string; alt: string };
 };
 
 export type ArticleTable = {
@@ -30,6 +32,7 @@ export type ArticleSection = {
   groups?: { label: string; items: string[] }[];
   compact?: boolean;
   columns?: ArticleColumn[];
+  wideImageColumn?: boolean;
   table?: ArticleTable;
   subsections?: ArticleSubsection[];
 };
@@ -844,69 +847,105 @@ export const blogArticles: Record<string, Article> = {
   "building-design-services-melbourne": {
     slug: "building-design-services-melbourne",
     intro: [
-      "Manzel Studio provides purpose-driven building design services in Melbourne for residential, commercial and health space projects. Based in Preston, the studio blends creative thinking, construction knowledge and a client-focused process to guide projects from first idea through to construction support.",
-      "The studio is led by Ahmed Dirani, alongside a team of registered building designers, drafters and project coordinators.",
+      "Manzel Studio provides purpose-driven building design services in Melbourne for residential, commercial and health space projects. Based in Preston, the studio combines creative thinking, practical construction knowledge and a clear design process to develop spaces that respond to each client's site, budget and everyday requirements.",
+      "Led by [Ahmed Dirani](/about-us), Registered Building Designer, Manzel Studio has been created for clients who want thoughtful design without losing sight of budget, function, or buildability. The studio's work is grounded in a simple idea: great building design should not only look good, but also support the way people live, work, recover, and connect.",
+      "With decades of combined experience across building design and construction, Manzel Studio offers a practical, client-first approach to projects throughout Melbourne and surrounding areas. Every project begins with careful listening, a clear understanding of the site, and a review of the client's goals.",
     ],
     sections: [
       {
         heading: "A Clear Building Design Process From the First Idea",
         paragraphs: [
-          "Building projects can feel overwhelming before they even start. Manzel Studio's staged process breaks the work into clear steps, so clients understand what's happening at every point and feel confident as the project progresses.",
+          "Starting a building project can feel overwhelming, especially when there are budgets, approvals, site conditions, and design decisions to think about. Manzel Studio helps clients move through the process with more clarity, beginning with the first conversation and continuing through concept development and detailed design.",
+          "The aim is to make each stage feel considered and manageable, so clients understand their options and feel confident about the direction of their project.",
         ],
       },
       {
         heading: "Practical Building Design That Still Feels Thoughtful",
         paragraphs: [
-          "Good design isn't about creating something impressive on paper that becomes difficult or unrealistic to build. The studio balances aesthetic ambition with buildability and budget realism, so what's designed is what actually gets delivered.",
+          "For Manzel Studio, good design is not about creating something impressive on paper that becomes difficult or unrealistic to build. It is about finding the right balance between what looks beautiful, what works well, and what can be achieved within the client's budget.",
+          "This practical mindset helps the studio create spaces that feel refined, functional, and suited to real life.",
         ],
       },
       {
         heading: "From Site Assessment to Construction Support",
+        banner: {
+          src: img("/pub/c0173968/editor-uploaded-image/Site Assessment to Construction Support.png"),
+          alt: "Site Assessment to Construction Support",
+        },
         paragraphs: [
-          "Services span the full project lifecycle — site assessment, feasibility review, concept design, design development, consultant coordination, permitting and construction support — so clients have a single point of contact from start to finish.",
+          "Every successful project starts with understanding the property and its constraints. Manzel Studio's process may include [site assessment](/site-assessment), feasibility review, concept design, design development, consultant coordination, planning and building permit documentation, and support during construction.",
+          "The exact stages depend on the project, site conditions and approval requirements. Clearly defining the process at the beginning helps clients understand what is required and make informed decisions about budget, design and project timing.",
         ],
       },
       {
         heading: "Building Design Services Across Melbourne",
-        list: [
-          "Residential — custom homes, renovations and extensions that prioritise comfort and everyday flow",
-          "Commercial — workplace and retail environments that support productivity and brand identity",
-          "Health Space — medical and wellness environments that balance patient comfort with clinical function",
+        leadIn:
+          "Based in Preston, Manzel Studio works with clients across metropolitan Melbourne and regional Victoria. Each design responds to the property's orientation, neighbourhood context, applicable planning controls and the way the completed space will be used.",
+        wideImageColumn: true,
+        columns: [
+          {
+            subsections: [
+              {
+                heading: "1. Residential",
+                paragraph:
+                  "Manzel Studio designs [custom homes, renovations, and home extensions](/residential-building-design) for families who want spaces that suit the way they actually live. From early concept planning through to detailed design, the studio focuses on comfort, flow, natural light, site potential, and long-term usability.",
+              },
+              {
+                heading: "2. Commercial",
+                paragraph:
+                  "For businesses, retailers, and workplace owners, Manzel Studio creates [commercial spaces](/commercial-building-design) that support productivity, customer experience, and brand identity. The studio understands that a [well-designed commercial environment](/blog/commercial-building-design-insights) needs to look professional while also serving practical business needs.",
+              },
+              {
+                heading: "3. Health Space",
+                paragraph:
+                  "Manzel Studio also specialises in [health space design](/health-space-design), including medical, wellness, and consulting environments. These spaces are designed with care to support patient comfort, staff workflow, accessibility, privacy, and clinical function.",
+              },
+            ],
+          },
+          {
+            image: {
+              src: img("/pub/c0173968/editor-uploaded-image/Building Design Services (1).png"),
+              alt: "Building Design Services Across Melbourne",
+            },
+          },
         ],
       },
       {
         heading: "A Practical Building Design Partner",
         paragraphs: [
-          "What sets the studio apart is the combination of creative design thinking with genuine construction expertise — meaning designs are shaped with buildability in mind from day one, not adjusted after the fact.",
+          "What sets Manzel Studio apart is its ability to connect creative design thinking with construction knowledge. This allows the studio to design spaces that are not only visually strong, but also realistic to build and aligned with each client's budget.",
+          "The studio works closely with clients to understand the purpose behind each space. Whether designing a family home, a workplace, a retail setting, or a medical clinic, Manzel Studio aims to create environments that feel personal, functional, and carefully resolved.",
+          "With its official launch, Manzel Studio is positioning itself as a [trusted building design studio in Melbourne](/) for clients seeking design quality, practical advice, and a clear process from concept to completion.",
         ],
       },
       {
         heading: "Creating Spaces That Work in Real Life",
         paragraphs: [
-          "Every project is approached with the people who'll actually use the space in mind — homeowners, staff, patients or customers — so the design supports everyday functionality, not just how a space photographs.",
+          "Manzel Studio believes successful building design should feel natural, useful, and enduring. Every design decision is made with real use in mind, from how people move through a space to how light, storage, comfort, privacy, and function are considered.",
+          "This [human-centred approach](/blog/designing-a-home-on-a-narrow-block) allows the studio to create homes, workplaces, and health environments that support everyday life while still feeling refined and purposeful.",
         ],
       },
     ],
     faqs: [
       {
-        q: "What building design services does Manzel Studio offer?",
-        a: "Residential, commercial and health space design — covering site assessment, concept design, planning permit documentation, building permit documentation and construction support.",
+        q: "What building design services does Manzel Studio provide?",
+        a: "Manzel Studio provides site assessments, feasibility reviews, concept design, design development, planning and permit documentation, consultant coordination and construction-stage support for suitable projects.",
       },
       {
-        q: "What types of projects do you take on?",
-        a: "New homes, renovations, extensions, townhouse and dual occupancy developments, commercial fit-outs and health space projects.",
+        q: "What types of projects does Manzel Studio design?",
+        a: "The studio works across residential, commercial and health-related projects, including new homes, renovations, extensions, multi-unit developments, commercial fit-outs and medical spaces.",
       },
       {
-        q: "Do you work outside Preston and inner Melbourne?",
-        a: "Yes — the studio works across metropolitan Melbourne and into regional Victoria.",
+        q: "Where does Manzel Studio provide building design services?",
+        a: "Manzel Studio is based in Preston and provides building design services across Melbourne and selected areas of regional Victoria.",
       },
       {
-        q: "Do you help with council approvals?",
-        a: "Yes. The studio manages planning permit and building permit documentation and liaises with council on the client's behalf.",
+        q: "Can a building designer assist with council approvals?",
+        a: "A building designer can help develop a design that responds to relevant planning requirements, coordinate necessary documentation and assist with council feedback. Approval requirements vary according to the site and project.",
       },
       {
-        q: "When's the best time to engage a building designer?",
-        a: "As early as possible — ideally before you've committed to a concept, so the design can be shaped around the site and planning requirements from the start.",
+        q: "When should I contact a building designer?",
+        a: "It is helpful to engage a building designer before committing to a layout or making major project decisions. Early site and feasibility reviews can identify constraints and opportunities before significant time and money are invested.",
       },
     ],
   },

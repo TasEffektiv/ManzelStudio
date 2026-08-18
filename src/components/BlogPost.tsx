@@ -209,10 +209,27 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                     )}
                     {section.columns && (
                       <div
-                        className={`mb-2 grid grid-cols-1 gap-x-8 gap-y-6 ${section.columns.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}
+                        className={`mb-2 grid grid-cols-1 gap-x-8 gap-y-6 ${
+                          section.wideImageColumn
+                            ? "md:grid-cols-[5fr_7fr] md:items-start"
+                            : section.columns.length >= 3
+                              ? "sm:grid-cols-3"
+                              : "sm:grid-cols-2"
+                        }`}
                       >
                         {section.columns.map((col, ci) => (
                           <div key={ci}>
+                            {col.image && (
+                              <div className="relative aspect-[690/1080] w-full overflow-hidden rounded-2xl">
+                                <Image
+                                  src={col.image.src}
+                                  alt={col.image.alt}
+                                  fill
+                                  className="object-cover"
+                                  sizes="(min-width: 768px) 45vw, 100vw"
+                                />
+                              </div>
+                            )}
                             {col.heading && (
                               <h4 className="mb-2 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-black md:text-[21px] md:leading-[38px]">
                                 {col.heading}
@@ -230,6 +247,18 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                                   </li>
                                 ))}
                               </ul>
+                            )}
+                            {col.subsections && (
+                              <div className="space-y-5">
+                                {col.subsections.map((sub) => (
+                                  <div key={sub.heading}>
+                                    <h4 className="mb-2 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-black md:text-[21px] md:leading-[38px]">
+                                      {sub.heading}
+                                    </h4>
+                                    <p className="text-[16px] leading-[28px] text-black">{renderRich(sub.paragraph)}</p>
+                                  </div>
+                                ))}
+                              </div>
                             )}
                             {col.paragraphs?.map((p, pi) => (
                               <p key={pi} className="mt-3 text-[16px] leading-[28px] text-black">
