@@ -637,11 +637,16 @@ export const blogArticles: Record<string, Article> = {
   "commercial-building-design-insights": {
     slug: "commercial-building-design-insights",
     intro: [
-      "Commercial buildings have evolved significantly over the past decade. Today's businesses require spaces that do more than provide shelter — they need environments that support productivity, attract customers, improve sustainability and adapt to changing operational needs.",
+      "Commercial buildings have evolved significantly over the past decade. Today's businesses require spaces that do more than provide shelter - they need environments that support productivity, attract customers, improve sustainability and adapt to changing operational needs.",
+      "From office developments and retail premises to healthcare facilities and mixed-use projects, commercial building design plays a crucial role in determining how a building performs over its lifespan. In Melbourne's competitive property market, thoughtful design can create long-term value while helping businesses achieve their operational goals.",
     ],
     sections: [
       {
         heading: "Why Commercial Building Design Matters",
+        leadIn: [
+          "A [well-designed commercial building](/our-projects) can influence every aspect of a business operation. Beyond aesthetics, design impacts efficiency, customer experience, employee wellbeing and long-term maintenance costs.",
+          "Effective commercial design can help:",
+        ],
         list: [
           "Improve workplace functionality",
           "Enhance customer and visitor experiences",
@@ -651,73 +656,187 @@ export const blogArticles: Record<string, Article> = {
           "Improve accessibility and compliance",
           "Create flexibility for future growth",
         ],
-      },
-      {
-        heading: "Key Principles of Successful Commercial Design",
         paragraphs: [
-          "Good commercial design starts with functionality — staff workflows, customer movement, equipment and storage needs, accessibility and future operational change all shape the plan.",
-          "Flexibility matters just as much. Open-plan layouts, modular workspaces, multi-purpose meeting areas and adaptable tenancy arrangements let a building evolve as a business grows or changes.",
-          "Sustainability and environmental performance round it out — passive solar design, natural ventilation, energy-efficient lighting, high-performance glazing, water-saving fixtures and sustainable materials all reduce long-term running costs.",
+          "As Melbourne continues to grow and diversify, commercial developments must respond to changing expectations around technology, sustainability and user experience.",
         ],
       },
+      { heading: "Key Principles of Successful Commercial Building Design" },
       {
-        heading: "Emerging Commercial Design Trends",
-        list: [
-          "Smart building technology — automated lighting, intelligent climate control, occupancy monitoring and integrated security",
-          "Wellness-focused workspaces — natural daylight, better air quality, acoustic treatment and biophilic design",
-          "Mixed-use development growth — commercial, retail, residential and hospitality combined on one site",
-          "Sustainable urban design — streetscape activation, walkability and green infrastructure",
+        heading: "1. Prioritising Functionality",
+        level: 3,
+        leadIn: [
+          "Every successful commercial project begins with a clear understanding of how the building will be used.",
+          "Design considerations typically include:",
         ],
+        list: ["Staff workflows", "Customer movement patterns", "Equipment requirements", "Storage needs", "Accessibility requirements", "Future operational changes"],
+        paragraphs: ["A building should support business activities efficiently while remaining practical for daily use."],
       },
       {
-        heading: "Types of Commercial Buildings We Design",
+        heading: "2. Designing for Flexibility",
+        level: 3,
+        leadIn: [
+          "Commercial requirements can change over time. Flexible spaces allow businesses to adapt without requiring extensive renovations.",
+          "Common strategies include:",
+        ],
+        list: ["Open-plan layouts", "Modular workspaces", "Multi-purpose meeting areas", "Adaptable retail configurations", "Flexible tenancy arrangements"],
+        paragraphs: ["Future-proofing a building can help reduce long-term costs while extending the usefulness of the space."],
+      },
+      {
+        heading: "3. Sustainability and Environmental Performance",
+        level: 3,
+        leadIn: [
+          "Sustainability is now a major consideration in commercial building projects across Melbourne.",
+          "Modern commercial developments often incorporate:",
+        ],
+        list: ["Passive solar design", "Natural ventilation", "Energy-efficient lighting", "High-performance glazing", "Water-saving initiatives", "Sustainable building materials"],
         paragraphs: [
-          "Office buildings need thoughtful workspace planning, meeting facilities, staff amenities and strong natural lighting. Retail spaces prioritise customer circulation, product visibility and storefront presentation. Healthcare and specialist facilities require careful attention to patient flow, privacy and accessibility compliance. Mixed-use developments need all of the above coordinated across a single site.",
+          "These strategies can improve occupant comfort while reducing environmental impacts and operating expenses.",
+          "Businesses planning a new development can benefit from understanding the broader [professional building design process](/blog/building-design-services-melbourne), from initial feasibility assessments through to approvals and construction documentation.",
         ],
       },
+      { heading: "Emerging Commercial Building Design Trends" },
       {
-        heading: "The Commercial Building Design Process",
-        list: [
-          "Site analysis and feasibility",
-          "Concept design and space planning",
-          "Planning and permit documentation",
-          "Construction documentation",
+        heading: "1. Smart Building Technology",
+        level: 3,
+        leadIn: ["Technology is becoming increasingly integrated into commercial environments.", "Smart building features may include:"],
+        list: ["Automated lighting systems", "Intelligent climate control", "Building management systems", "Occupancy monitoring", "Security integration", "Energy consumption tracking"],
+        paragraphs: ["These technologies can improve efficiency while providing valuable operational insights."],
+      },
+      {
+        heading: "2. Wellness-Focused Workspaces",
+        level: 3,
+        leadIn: ["Employee wellbeing has become an important consideration in workplace design.", "Modern commercial spaces often incorporate:"],
+        list: ["Increased natural daylight", "Improved air quality", "Acoustic treatments", "Collaborative spaces", "Access to outdoor areas", "Biophilic design elements"],
+        paragraphs: ["Creating healthier environments can support productivity, comfort and employee satisfaction."],
+      },
+      {
+        heading: "3. Mixed-Use Development Growth",
+        level: 3,
+        leadIn: ["Mixed-use developments continue to gain popularity throughout Melbourne.", "These projects may combine:"],
+        list: ["Commercial offices", "Retail spaces", "Residential apartments", "Hospitality venues", "Community facilities"],
+        paragraphs: ["The integration of multiple uses can create vibrant, active precincts that maximise site potential."],
+      },
+      {
+        heading: "4. Sustainable Urban Design",
+        level: 3,
+        leadIn: ["Modern commercial developments increasingly focus on how buildings contribute to the surrounding community.", "Design considerations may include:"],
+        list: ["Streetscape activation", "Walkability", "Public realm improvements", "Green infrastructure", "Public transport accessibility", "Community connectivity"],
+        paragraphs: ["Well-integrated developments contribute positively to both businesses and local neighbourhoods."],
+      },
+      { heading: "Types of Commercial Buildings" },
+      {
+        heading: "1. Office Buildings",
+        level: 3,
+        leadIn: ["Office environments must balance collaboration, productivity and flexibility.", "Important considerations include:"],
+        list: ["Workspace planning", "Meeting facilities", "Staff amenities", "Technology infrastructure", "Acoustic performance", "Natural lighting"],
+      },
+      {
+        heading: "2. Retail Spaces",
+        level: 3,
+        leadIn: ["Retail design focuses heavily on customer experience and operational efficiency.", "Successful retail projects often consider:"],
+        list: ["Customer circulation", "Product visibility", "Storefront presentation", "Accessibility", "Storage requirements", "Future adaptability"],
+      },
+      {
+        heading: "3. Healthcare and Specialist Facilities",
+        level: 3,
+        leadIn: ["Medical and health-related projects require specialised planning and compliance considerations.", "These developments commonly involve:"],
+        list: ["Patient flow management", "Privacy requirements", "Accessibility compliance", "Specialist equipment integration", "Waiting areas", "Clinical support spaces"],
+      },
+      {
+        heading: "4. Mixed-Use Developments",
+        level: 3,
+        paragraphs: [
+          "Mixed-use projects require careful coordination between different building functions while ensuring each component operates efficiently and independently where required.",
+        ],
+      },
+      { heading: "The Commercial Building Design Process" },
+      {
+        heading: "1. Site Analysis and Feasibility",
+        level: 3,
+        leadIn: "The first stage involves assessing:",
+        list: ["Site dimensions", "Planning controls", "Access requirements", "Environmental constraints", "Development opportunities"],
+        paragraphs: ["A detailed feasibility assessment helps establish realistic project outcomes from the outset."],
+      },
+      {
+        heading: "2. Concept Design",
+        level: 3,
+        leadIn: ["Concept design transforms project objectives into an initial building solution.", "This stage may include:"],
+        list: ["Floor plans", "Space planning", "Building massing", "Preliminary design concepts", "Site integration strategies"],
+      },
+      {
+        heading: "3. Planning and Permit Documentation",
+        level: 3,
+        leadIn: ["Many commercial developments require planning and building approvals before construction can begin.", "This process may involve:"],
+        list: ["Planning permit applications", "Building permit documentation", "Consultant coordination", "Council liaison", "Compliance reviews"],
+      },
+      {
+        heading: "4. Construction Documentation",
+        level: 3,
+        paragraphs: [
+          "Detailed drawings provide contractors and consultants with the information required to build the project accurately and efficiently.",
         ],
       },
       {
         heading: "Designing for Challenging Sites",
+        leadIn: ["Not all commercial projects are located on large, straightforward sites.", "Melbourne developments often involve:"],
+        list: ["Narrow allotments", "Corner sites", "Infill developments", "Irregular land shapes", "Urban constraints"],
         paragraphs: [
-          "Melbourne commercial projects often sit on narrow allotments, corner sites or irregularly shaped land. Good design turns these constraints into character — working with the site rather than fighting it.",
+          "Many of the same design principles used when [maximising design outcomes on constrained sites](/blog/designing-a-home-on-a-narrow-block) can also be applied to commercial developments where efficient space planning is essential.",
         ],
       },
       {
         heading: "Balancing Aesthetics and Performance",
+        leadIn: ["Commercial buildings must achieve both visual appeal and practical functionality.", "Successful projects balance:"],
+        list: ["Architectural character", "Operational requirements", "User experience", "Construction efficiency", "Budget objectives", "Long-term maintenance considerations"],
+        paragraphs: ["Good design creates buildings that are attractive, practical and durable."],
+      },
+      {
+        heading: "Sustainability in Melbourne Commercial Development",
+        leadIn: ["Environmental performance is becoming increasingly important within the commercial property sector.", "Modern developments often focus on:"],
+        list: ["Energy efficiency", "Thermal performance", "Sustainable material selection", "Reduced carbon emissions", "Water conservation", "Building resilience"],
         paragraphs: [
-          "The best commercial buildings balance architectural character with operational requirements, user experience, construction efficiency, budget and long-term maintenance — no single factor should be designed in isolation.",
+          "Integrating sustainability early in the design process can lead to better outcomes than attempting to retrofit environmental features later.",
         ],
       },
       {
         heading: "Choosing a Commercial Building Designer",
-        paragraphs: [
-          "Look for relevant project experience, sound knowledge of planning regulations, quality documentation, clear communication, sustainability expertise, and the ability to coordinate consultants and construction requirements.",
+        banner: {
+          src: img("/pub/c0173968/editor-uploaded-image/Commercial Building Design Melbourne.png"),
+          alt: "Choosing a Commercial Building Designer",
+        },
+        leadIn: [
+          "Selecting the [right commercial building designer](/commercial-building-design) is an important step in any commercial project.",
+          "Consider factors such as:",
         ],
+        list: [
+          "Relevant project experience",
+          "Knowledge of planning regulations",
+          "Documentation quality",
+          "Communication processes",
+          "Sustainability expertise",
+          "Consultant coordination capabilities",
+          "Understanding of construction requirements",
+        ],
+        paragraphs: ["A collaborative design approach can help reduce project risks while supporting smoother approvals and construction outcomes."],
       },
     ],
     conclusion: [
-      "Thoughtful commercial design can significantly influence a building's long-term performance and value — for the business that occupies it and the community around it.",
+      "Commercial building design continues to evolve as businesses seek spaces that are more sustainable, adaptable and user-focused. Whether developing an office building, retail premises, healthcare facility or mixed-use project, thoughtful design can significantly influence long-term performance and value.",
+      "By prioritising functionality, sustainability and future flexibility, commercial developments can better serve businesses, occupants and the wider community.",
+      "For developers, investors and business owners, engaging experienced building design professionals early in the process can help unlock site potential while creating practical and future-ready commercial environments.",
     ],
     faqs: [
       {
         q: "What is commercial building design?",
-        a: "It's the process of planning and documenting non-residential buildings — offices, retail, healthcare and mixed-use spaces — so they're functional, compliant and suited to how the business will operate.",
+        a: "Commercial building design involves planning and documenting buildings used for business purposes, including offices, retail stores, healthcare facilities, hospitality venues and mixed-use developments.",
       },
       {
         q: "Why is sustainable commercial building design important?",
-        a: "Sustainable design reduces running costs, improves comfort for staff and customers, and supports compliance with increasingly stringent energy and environmental standards.",
+        a: "Sustainable design can improve energy efficiency, reduce operating costs, enhance occupant comfort and support environmental performance over the life of a building.",
       },
       {
         q: "What should I look for in a commercial building designer?",
-        a: "Relevant project experience, strong knowledge of planning requirements, clear documentation, and a process that coordinates consultants and construction needs from the outset.",
+        a: "Look for experience with similar projects, strong documentation capabilities, knowledge of local planning requirements, effective communication and an understanding of sustainable design principles.",
       },
     ],
   },
