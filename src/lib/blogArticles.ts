@@ -1,15 +1,37 @@
 import { img } from "./content";
 
+export type ArticleColumn = {
+  heading?: string;
+  label?: string;
+  sub?: string;
+  list?: string[];
+  paragraphs?: string[];
+};
+
+export type ArticleTable = {
+  headers: string[];
+  rows: string[][];
+};
+
+export type ArticleSubsection = {
+  heading: string;
+  paragraph: string;
+};
+
 export type ArticleSection = {
   heading: string;
   level?: 2 | 3;
   image?: { src: string; alt: string };
-  leadIn?: string;
+  banner?: { src: string; alt: string };
+  leadIn?: string | string[];
   paragraphs?: string[];
   list?: string[];
   ordered?: boolean;
   groups?: { label: string; items: string[] }[];
   compact?: boolean;
+  columns?: ArticleColumn[];
+  table?: ArticleTable;
+  subsections?: ArticleSubsection[];
 };
 
 export type Article = {
@@ -317,141 +339,294 @@ export const blogArticles: Record<string, Article> = {
   "building-designer-vs-architect-vs-draftsman-australia": {
     slug: "building-designer-vs-architect-vs-draftsman-australia",
     intro: [
-      "If you're planning a new home, renovation, extension, townhouse development or commercial project, one of the first decisions you'll need to make is whether to engage a building designer, an architect, or a draftsman. Each profession has different qualifications, responsibilities and areas of expertise — and the right choice depends on your project's scale, complexity and goals.",
+      "If you're planning a new home, renovation, extension, townhouse development or commercial project, one of the first decisions you'll need to make is whether to work with a building designer, architect or draftsman.",
+      "While these professions all contribute to the design and documentation of buildings, they each have different qualifications, responsibilities and areas of expertise. Understanding these differences can help you choose the right professional for your project, budget and goals.",
+      "In Australia, the most suitable choice often depends on the project's complexity, local regulatory requirements, and the level of design and project support you need.",
+      "This guide explains the roles of each professional, compares their qualifications and services, and helps you determine which option is right for your project.",
     ],
     sections: [
       {
         heading: "What Does a Building Designer Do?",
-        paragraphs: [
-          "A building designer specialises in creating functional, compliant residential and commercial spaces. Typical projects include new homes, renovations, extensions, dual occupancy developments, townhouses, commercial fit-outs, health spaces and mixed-use developments.",
-        ],
-        list: [
-          "Site analysis and feasibility",
-          "Concept design and design development",
-          "Town planning documentation",
-          "Building permit documentation",
-          "Construction drawings",
-          "Consultant coordination and council liaison",
-          "Sustainability coordination",
+        leadIn: "A building designer is a design professional who specialises in creating functional, compliant and buildable residential and commercial spaces.",
+        columns: [
+          {
+            label: "Building designers typically work on:",
+            list: [
+              "New homes",
+              "Home renovations",
+              "Home extensions",
+              "Dual occupancy developments",
+              "Townhouse developments",
+              "Commercial fit-outs",
+              "Health spaces",
+              "Mixed-use developments",
+            ],
+            paragraphs: [
+              "Their role extends beyond creating floor plans. A building designer often manages the design process from concept through to planning approvals, building permits and construction documentation.",
+            ],
+          },
+          {
+            label: "A building designer may provide:",
+            list: [
+              "Site analysis",
+              "Concept design",
+              "Design development",
+              "Town planning documentation",
+              "Building permit documentation",
+              "Construction drawings",
+              "Consultant coordination",
+              "Council liaison",
+              "Sustainability and energy compliance coordination",
+            ],
+            paragraphs: [
+              "Many building designers also work closely with engineers, surveyors, energy assessors and builders throughout the project lifecycle.",
+            ],
+          },
         ],
       },
       {
         heading: "What Does an Architect Do?",
-        paragraphs: [
-          "An architect is a registered design professional who has completed an accredited university qualification. The title \"Architect\" is protected under Australian legislation and can only be used by those registered with their state architects board.",
-          "Architects typically work across residential homes, multi-residential developments, commercial buildings, educational facilities, healthcare projects and public buildings — often taking on complex design challenges, large-scale projects and detailed project leadership.",
+        leadIn:
+          "An architect is a registered design professional who has completed an accredited university qualification, gained industry experience and satisfied registration requirements established by the relevant architectural registration authority.",
+        columns: [
+          {
+            label: "Architects work across a wide range of project types, including:",
+            list: [
+              "Residential homes",
+              "Multi-residential developments",
+              "Commercial buildings",
+              "Educational facilities",
+              "Healthcare projects",
+              "Public buildings",
+            ],
+            paragraphs: [
+              "The title \"Architect\" is protected under Australian legislation and can only be used by appropriately registered professionals.",
+            ],
+          },
+          {
+            label: "Architects often focus on:",
+            list: [
+              "Complex design challenges",
+              "Large-scale projects",
+              "Architectural innovation",
+              "Detailed design development",
+              "High-level project leadership",
+            ],
+            paragraphs: [
+              "Architects are often engaged for highly complex or specialised projects where advanced design, technical coordination and project leadership are required.",
+            ],
+          },
         ],
       },
       {
         heading: "What Does a Draftsman Do?",
+        leadIn: [
+          "A draftsman, also known as a draftsperson or drafting technician, specialises in preparing technical drawings and documentation.",
+          "While architects and building designers often lead the design process, draftsmen generally focus on accurately documenting the design for construction and approval.",
+        ],
+        columns: [
+          {
+            label: "Typical Draftsman Responsibilities:",
+            list: [
+              "Produce technical drawings",
+              "Prepare construction documentation",
+              "Amend existing plans",
+              "Convert sketches into digital plans",
+              "Assist with permit documentation",
+              "Support designers, architects and builders",
+            ],
+          },
+          {
+            label: "Draftsmen commonly:",
+            list: ["Create technical plans", "Document design details", "Prepare construction drawings", "Support design teams"],
+          },
+        ],
         paragraphs: [
-          "A draftsman specialises in technical drawings and documentation, typically using CAD and BIM software. Their work includes producing technical drawings, preparing construction documentation, amending existing plans, converting sketches into digital plans, and assisting with permit documentation.",
+          "Modern drafting professionals commonly use CAD (Computer-Aided Design) and BIM (Building Information Modelling) software to prepare detailed building documentation.",
         ],
       },
       {
-        heading: "Comparison at a Glance",
-        list: [
-          "Draftsman — best for simple documentation, plan amendments and basic drafting",
-          "Building Designer — best for new homes, renovations, extensions and residential developments",
-          "Architect — best for complex, large-scale or highly specialised projects",
-        ],
-      },
-      {
-        heading: "Qualifications Compared",
-        list: [
-          "Building Designer — diploma, advanced diploma or degree in building design; registration requirements vary by state",
-          "Architect — accredited architecture degree plus mandatory registration",
-          "Draftsman — drafting qualification or CAD training; registration generally not required",
-        ],
-      },
-      {
-        heading: "Choose a Building Designer If You Are:",
-        list: [
-          "Building a new home",
-          "Planning an extension",
-          "Renovating an existing property",
-          "Developing townhouses",
-          "Looking for practical design solutions",
-          "Wanting support through permits and approvals",
-        ],
-      },
-      {
-        heading: "Choose an Architect If You Are:",
-        list: [
-          "Designing a highly complex building",
-          "Developing a large commercial project",
-          "Seeking a highly specialised architectural outcome",
-          "Working on a landmark project",
-        ],
-      },
-      {
-        heading: "Choose a Draftsman If You Need:",
-        list: [
-          "Technical drafting only",
-          "Minor plan amendments",
-          "Documentation support",
-          "Updates to an existing design",
-        ],
-      },
-      {
-        heading: "Common Myths, Debunked",
+        heading: "Building Designer, Architect or Draftsman: Quick Comparison",
+        table: {
+          headers: ["Profession", "Primary Role", "Best Suited For", "Typical Services"],
+          rows: [
+            [
+              "Building Designer",
+              "Design, documentation and project coordination",
+              "New homes, renovations, extensions, townhouses and small-to-medium developments",
+              "Design concepts, permit documentation, consultant coordination",
+            ],
+            [
+              "Architect",
+              "Registered design professional",
+              "Complex residential, commercial and specialised projects",
+              "Architectural design, project leadership, consultant coordination",
+            ],
+            [
+              "Draftsman",
+              "Technical documentation specialist",
+              "Drafting support, plan preparation and documentation",
+              "Construction drawings, drafting and plan amendments",
+            ],
+          ],
+        },
         paragraphs: [
-          "It's a myth that building designers are limited to small projects — many deliver complex residential and commercial work every day. It's also not true that an architect will always produce a superior design outcome; the right fit depends on the project. And draftsmen do more than produce drawings — many provide valuable input on documentation and permit coordination.",
+          "For many residential projects, homeowners may find that both building designers and architects can provide suitable design solutions, while draftsmen typically focus on preparing technical documentation.",
         ],
       },
       {
-        heading: "How Your Choice Affects the Project",
+        heading: "Qualifications Comparison",
+        table: {
+          headers: ["Profession", "Typical Qualification", "Registration"],
+          rows: [
+            ["Building Designer", "Diploma, Advanced Diploma or Degree in Building Design or related field", "Varies by state"],
+            ["Architect", "Accredited Architecture Degree + Registration", "Mandatory"],
+            ["Draftsman", "Drafting qualification or CAD training", "Generally not required"],
+          ],
+        },
+      },
+      {
+        heading: "Cost Comparison: Architect vs Building Designer vs Draftsman",
+        leadIn: "Cost is often a major factor when selecting a design professional.",
+        columns: [
+          { heading: "Draftsman", sub: "Suitable for:", list: ["Simple documentation", "Existing design amendments", "Basic drafting work"] },
+          { heading: "Building Designer", sub: "Suitable for:", list: ["New homes", "Renovations", "Extensions", "Residential developments"] },
+          {
+            heading: "Architect",
+            sub: "Suitable for:",
+            list: ["Complex projects", "Landmark homes", "Commercial developments", "Specialist architectural projects"],
+          },
+        ],
+        paragraphs: ["The best choice should be based on project requirements rather than fees alone."],
+      },
+      {
+        heading: "Which Professional Should You Choose?",
+        banner: {
+          src: img("/pub/c0173968/editor-uploaded-image/Which Professional Should You Choose.png"),
+          alt: "Which Professional Should You Choose",
+        },
+        columns: [
+          {
+            heading: "Choose a Building Designer If You Are:",
+            list: [
+              "Building a new home",
+              "Planning an extension",
+              "Renovating an existing property",
+              "Developing townhouses",
+              "Seeking practical design solutions",
+              "Looking for support through permits and approvals",
+            ],
+          },
+          {
+            heading: "Choose an Architect If You Are:",
+            list: [
+              "Designing a highly complex building",
+              "Developing a large commercial project",
+              "Seeking a highly specialised architectural outcome",
+              "Working on a landmark project",
+            ],
+          },
+          {
+            heading: "Choose a Draftsman If You Need:",
+            list: ["Technical drafting only", "Minor plan amendments", "Documentation support", "Existing design updates"],
+          },
+        ],
+      },
+      {
+        heading: "Common Myths About Building Designers, Architects and Draftsmen",
+        subsections: [
+          {
+            heading: "Myth 1: Building Designers Can Only Design Small Projects",
+            paragraph: "Many building designers successfully deliver luxury homes, townhouse developments and commercial projects.",
+          },
+          {
+            heading: "Myth 2: Architects Always Produce Better Designs",
+            paragraph:
+              "Project outcomes depend on the experience, expertise and creativity of the individual professional rather than their title alone.",
+          },
+          {
+            heading: "Myth 3: Draftsmen Only Draw Plans",
+            paragraph:
+              "Modern drafting professionals often possess advanced technical knowledge and play an important role in construction documentation and project delivery.",
+          },
+        ],
+      },
+      {
+        heading: "Why Choosing the Right Professional Matters",
+        banner: {
+          src: img("/pub/c0173968/editor-uploaded-image/Why Choosing the Right Professional Matters.png"),
+          alt: "Why Choosing the Right Professional Matters",
+        },
+        leadIn: "The design phase influences every stage of a building project, including:",
+        list: ["Construction costs", "Buildability", "Planning approvals", "Building approvals", "Energy efficiency", "Project timelines", "Long-term property value"],
         paragraphs: [
-          "The professional you choose influences construction costs, buildability, planning and building approvals, energy efficiency, project timelines and long-term property value — which is why matching the right expertise to the right project matters.",
+          "Selecting the right professional from the beginning can help reduce risk, improve project outcomes and create a smoother pathway from concept to construction.",
         ],
       },
       {
-        heading: "Questions to Ask Before You Hire",
+        heading: "Questions to Ask Before Hiring a Design Professional",
+        leadIn: "Before appointing a building designer, architect or draftsman, consider asking:",
         list: [
-          "Are you registered or licensed, and in what capacity?",
-          "Have you worked on similar projects before?",
-          "Can you provide references?",
-          "Can you prepare planning permit documentation?",
-          "Can you prepare building permit documentation?",
-          "Do you coordinate consultants such as engineers and surveyors?",
-          "What does your fee proposal include?",
-          "What level of support do you provide through the project?",
+          "Are you registered or licensed where required?",
+          "Have you completed similar projects?",
+          "Can you provide references or examples of previous work?",
+          "Do you prepare planning permit documentation?",
+          "Do you prepare building permit documentation?",
+          "Do you coordinate consultants?",
+          "What is included in your fee proposal?",
+          "What level of project support do you provide?",
         ],
+        paragraphs: ["The answers can help you determine whether the professional is the right fit for your project."],
       },
       {
-        heading: "A Note for Victorian Projects",
-        paragraphs: [
-          "Melbourne and regional Victorian projects often need to navigate ResCode requirements, neighbourhood character provisions, planning overlays, heritage controls, bushfire management requirements and energy efficiency standards — all of which make local experience valuable, regardless of which professional you engage.",
+        heading: "What About Melbourne and Victorian Projects?",
+        leadIn: [
+          "If you are planning a project in Melbourne or regional Victoria, it is important to work with a professional who understands local planning controls and approval processes.",
+          "Key considerations may include:",
         ],
+        list: [
+          "ResCode requirements",
+          "Neighbourhood character provisions",
+          "Planning overlays",
+          "Heritage controls",
+          "Bushfire management requirements",
+          "Energy efficiency standards",
+          "Planning permit requirements",
+          "Building permit requirements",
+        ],
+        paragraphs: ["A professional familiar with Victorian regulations can help streamline the approval process and reduce the likelihood of costly delays."],
       },
     ],
     conclusion: [
-      "There's no single right answer — a building designer, architect or draftsman can each be the right fit depending on your project. What matters most is choosing a professional with relevant experience, the right qualifications, and a process that suits the scale of what you're building.",
+      "There is no single answer when comparing a building designer, architect and draftsman.",
+      "For many residential projects across Melbourne and Australia, a qualified building designer can provide the ideal combination of design expertise, practical construction knowledge and project coordination. Architects may be better suited to highly complex or specialised developments, while draftsmen remain valuable technical documentation professionals.",
+      "The most important consideration is choosing a professional with the right experience, qualifications and understanding of your specific project.",
+      "Whether you are planning a new home, extension, renovation or development, obtaining professional advice early can help create a more efficient and successful project outcome.",
     ],
     faqs: [
       {
         q: "Is a building designer cheaper than an architect?",
-        a: "Generally, yes — building designers typically offer a more cost-effective service for standard residential and commercial projects, while architects' fees reflect the scope of highly complex or bespoke work.",
+        a: "Fees vary depending on the project scope and complexity. Building designers are commonly engaged for residential projects because they often provide design, documentation and approval support in a cost-effective manner.",
       },
       {
         q: "Can a building designer prepare plans for council approval?",
-        a: "Yes. Building designers regularly prepare and lodge town planning and building permit documentation as part of their standard service.",
+        a: "Yes. Building designers commonly prepare planning permit and building permit documentation and coordinate consultants throughout the approval process.",
       },
       {
-        q: "What's the difference between a draftsman and a building designer?",
-        a: "A draftsman focuses on technical drawing and documentation, while a building designer manages the broader design process — from concept through to permit documentation and consultant coordination.",
+        q: "What is the difference between a draftsman and a building designer?",
+        a: "A draftsman primarily focuses on technical documentation and drawings, while a building designer typically provides design development, project coordination, permit documentation and broader project support.",
       },
       {
-        q: "Can a building designer design a new home from scratch?",
-        a: "Yes. Designing new homes, from initial concept through to construction documentation, is core work for a building designer.",
+        q: "Can a building designer design a new home?",
+        a: "Yes. Building designers regularly design new homes, renovations, extensions and residential developments.",
       },
       {
         q: "Do I need an architect for a house extension?",
-        a: "Not necessarily. Most extensions are well suited to a building designer, and an architect is typically only needed for highly complex or architecturally ambitious projects.",
+        a: "Not necessarily. Many house extensions are successfully designed and documented by qualified building designers. The most suitable professional depends on the complexity of the project and your specific requirements.",
       },
       {
         q: "Can a draftsman design a house?",
-        a: "A draftsman can document a design, but the design process itself — site analysis, concept development and planning strategy — is usually led by a building designer or architect.",
+        a: "A draftsman may prepare house plans and documentation, but their role is typically focused on drafting and technical documentation rather than leading the overall design process.",
       },
     ],
   },

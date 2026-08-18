@@ -129,8 +129,97 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                     >
                       {section.heading}
                     </Heading>
-                    {section.leadIn && (
-                      <p className="mb-3 text-[16px] leading-[28px] text-black">{section.leadIn}</p>
+                    {section.banner && (
+                      <div className="relative mb-6 w-full overflow-hidden rounded-2xl aspect-[1080/693]">
+                        <Image
+                          src={section.banner.src}
+                          alt={section.banner.alt}
+                          fill
+                          className="object-cover"
+                          sizes="(min-width: 768px) 900px, 100vw"
+                        />
+                      </div>
+                    )}
+                    {section.leadIn &&
+                      (Array.isArray(section.leadIn) ? (
+                        section.leadIn.map((p, k) => (
+                          <p key={k} className="mb-3 text-[16px] leading-[28px] text-black">
+                            {p}
+                          </p>
+                        ))
+                      ) : (
+                        <p className="mb-3 text-[16px] leading-[28px] text-black">{section.leadIn}</p>
+                      ))}
+                    {section.table && (
+                      <div className="mb-4 overflow-x-auto">
+                        <table className="w-full min-w-[560px] border-collapse text-left">
+                          <thead>
+                            <tr className="bg-black/[0.06]">
+                              {section.table.headers.map((h) => (
+                                <th key={h} className="border border-black/10 px-5 py-4 text-[15px] font-bold leading-[22px] text-black">
+                                  {h}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {section.table.rows.map((row, ri) => (
+                              <tr key={ri}>
+                                {row.map((cell, ci) => (
+                                  <td key={ci} className="border border-black/10 px-5 py-4 align-top text-[15px] leading-[24px] text-black">
+                                    {cell}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                    {section.columns && (
+                      <div
+                        className={`mb-2 grid grid-cols-1 gap-x-8 gap-y-6 ${section.columns.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"}`}
+                      >
+                        {section.columns.map((col, ci) => (
+                          <div key={ci}>
+                            {col.heading && (
+                              <h4 className="mb-2 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-black md:text-[21px] md:leading-[38px]">
+                                {col.heading}
+                              </h4>
+                            )}
+                            {col.label && (
+                              <p className="mb-2 text-[16px] font-semibold leading-[1.3] text-black">{col.label}</p>
+                            )}
+                            {col.sub && <p className="mb-2 text-[16px] leading-[28px] text-black">{col.sub}</p>}
+                            {col.list && (
+                              <ul className="mb-2 list-disc space-y-2 pl-5">
+                                {col.list.map((item) => (
+                                  <li key={item} className="text-[15px] leading-[27px] text-black">
+                                    {item}
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                            {col.paragraphs?.map((p, pi) => (
+                              <p key={pi} className="mt-3 text-[16px] leading-[28px] text-black">
+                                {p}
+                              </p>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    {section.subsections && (
+                      <div className="space-y-6">
+                        {section.subsections.map((sub) => (
+                          <div key={sub.heading}>
+                            <h4 className="mb-2 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-black md:text-[21px] md:leading-[38px]">
+                              {sub.heading}
+                            </h4>
+                            <p className="text-[16px] leading-[28px] text-black">{sub.paragraph}</p>
+                          </div>
+                        ))}
+                      </div>
                     )}
                     {section.list &&
                       (section.ordered ? (
@@ -210,7 +299,12 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                       {section.paragraphs?.map((p, j) => (
                         <p
                           key={j}
-                          className={`${j === 0 && (section.leadIn || section.list || section.groups) ? "mt-4" : ""} mb-4 text-[16px] leading-[28px] text-black`}
+                          className={`${
+                            j === 0 &&
+                            (section.leadIn || section.list || section.groups || section.columns || section.table || section.subsections)
+                              ? "mt-4"
+                              : ""
+                          } mb-4 text-[16px] leading-[28px] text-black`}
                         >
                           {p}
                         </p>
