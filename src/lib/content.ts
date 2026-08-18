@@ -212,7 +212,7 @@ export const blogPosts = [
       "/resources/c0173968/blog-post/post-25/300-EssentialStepstoPerformanArchitecturalSiteAnalysisforaNewBuildingProject.png"
     ),
     imageLarge: img(
-      "/resources/c0173968/blog-post/post-25/450-EssentialStepstoPerformanArchitecturalSiteAnalysisforaNewBuildingProject.png"
+      "/resources/c0173968/blog-post/post-25/600-EssentialStepstoPerformanArchitecturalSiteAnalysisforaNewBuildingProject.png"
     ),
     date: "Tue, 14 Jul 2026",
     excerpt:

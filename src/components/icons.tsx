@@ -22,6 +22,22 @@ export function XIcon() {
   );
 }
 
+export function FacebookIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22 12.06C22 6.505 17.523 2 12 2S2 6.505 2 12.06c0 5.02 3.657 9.184 8.438 9.94v-7.03H7.898v-2.91h2.54V9.845c0-2.522 1.492-3.915 3.777-3.915 1.094 0 2.238.197 2.238.197v2.475h-1.26c-1.243 0-1.63.775-1.63 1.57v1.888h2.773l-.443 2.91h-2.33V22c4.78-.756 8.437-4.92 8.437-9.94z" />
+    </svg>
+  );
+}
+
+export function EmailIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M2 5.5A1.5 1.5 0 013.5 4h17A1.5 1.5 0 0122 5.5v13a1.5 1.5 0 01-1.5 1.5h-17A1.5 1.5 0 012 18.5v-13zm2.2.5L12 11.2 19.8 6H4.2zM20 8.04l-7.44 5.3a1 1 0 01-1.12 0L4 8.04V18h16V8.04z" />
+    </svg>
+  );
+}
+
 export function PinterestIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
