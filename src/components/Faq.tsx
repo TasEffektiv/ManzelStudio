@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { faqs as defaultFaqs } from "@/lib/content";
+import { renderRich } from "@/lib/richText";
 import Reveal from "./Reveal";
 
 export default function Faq({
@@ -53,7 +54,7 @@ export default function Faq({
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="pb-6 text-[15.5px] leading-[1.7] text-ink-2 md:text-[16px]">{item.a}</p>
+                      <p className="pb-6 text-[15.5px] leading-[1.7] text-ink-2 md:text-[16px]">{renderRich(item.a)}</p>
                     </div>
                   </div>
                 </div>

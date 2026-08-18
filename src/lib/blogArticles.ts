@@ -24,7 +24,7 @@ export type ArticleSection = {
   heading: string;
   level?: 2 | 3;
   image?: { src: string; alt: string };
-  banner?: { src: string; alt: string };
+  banner?: { src: string; alt: string; aspect?: string };
   leadIn?: string | string[];
   paragraphs?: string[];
   list?: string[];
@@ -510,6 +510,7 @@ export const blogArticles: Record<string, Article> = {
         banner: {
           src: img("/pub/c0173968/editor-uploaded-image/Which Professional Should You Choose.png"),
           alt: "Which Professional Should You Choose",
+          aspect: "1080/693",
         },
         columns: [
           {
@@ -562,6 +563,7 @@ export const blogArticles: Record<string, Article> = {
         banner: {
           src: img("/pub/c0173968/editor-uploaded-image/Why Choosing the Right Professional Matters.png"),
           alt: "Why Choosing the Right Professional Matters",
+          aspect: "1080/658",
         },
         leadIn: "The design phase influences every stage of a building project, including:",
         list: ["Construction costs", "Buildability", "Planning approvals", "Building approvals", "Energy efficiency", "Project timelines", "Long-term property value"],
@@ -806,6 +808,7 @@ export const blogArticles: Record<string, Article> = {
         banner: {
           src: img("/pub/c0173968/editor-uploaded-image/Commercial Building Design Melbourne.png"),
           alt: "Choosing a Commercial Building Designer",
+          aspect: "1080/720",
         },
         leadIn: [
           "Selecting the [right commercial building designer](/commercial-building-design) is an important step in any commercial project.",
@@ -871,6 +874,7 @@ export const blogArticles: Record<string, Article> = {
         banner: {
           src: img("/pub/c0173968/editor-uploaded-image/Site Assessment to Construction Support.png"),
           alt: "Site Assessment to Construction Support",
+          aspect: "1080/611",
         },
         paragraphs: [
           "Every successful project starts with understanding the property and its constraints. Manzel Studio's process may include [site assessment](/site-assessment), feasibility review, concept design, design development, consultant coordination, planning and building permit documentation, and support during construction.",
@@ -953,69 +957,114 @@ export const blogArticles: Record<string, Article> = {
   "designing-a-home-on-a-narrow-block": {
     slug: "designing-a-home-on-a-narrow-block",
     intro: [
-      "If you've bought, inherited, or are eyeing a long, narrow block, you've probably been told it is \"tricky.\" Maybe even that you'll have to compromise. We don't agree. Narrow blocks can deliver generous, thoughtful and highly functional homes when the design is approached with care.",
+      "If you've bought, inherited, or are eyeing a long, narrow block, you've probably been told it is \"tricky.\" Maybe even that you'll have to compromise. We don't agree.",
+      "Narrow blocks can deliver generous, thoughtful, and highly functional homes when the design is approached with care. The key is understanding how to work with the site's proportions rather than fighting against them.",
+      "With the right planning, a narrow block can support excellent natural light, a strong indoor-outdoor connection, privacy, storage, and flexible living spaces. This article shares practical design principles that help narrow sites work well.",
     ],
     sections: [
       {
-        heading: "Why Narrow Block Design Offers Unique Opportunities",
+        heading: "Why Narrow Block Home Design Offers Unique Opportunities",
         paragraphs: [
-          "Narrow blocks are common in established suburbs and inner-city areas, often close to transport, schools and amenities that wider blocks in outer areas simply can't match. A limited width is a real design challenge — but it's one with strong potential when it's addressed early and deliberately.",
+          "[Narrow blocks](/project-coburg-the-avenue) are common in many established suburbs and inner-city neighbourhoods. They often sit close to shops, transport, parks, schools, and existing community infrastructure.",
+          "While the width of the block may be limited, the depth often provides opportunities for clever spatial planning. A narrow site can encourage a more efficient, purposeful home where every square metre has a clear role.",
+          "Rather than seeing a narrow block as a constraint, it is better to view it as a design challenge with strong potential.",
         ],
       },
       {
         heading: "Five Design Moves That Make Narrow Blocks Work",
-        ordered: true,
-        list: [
-          "Use the rear of the block strategically — for parking, garaging or private outdoor space, rather than defaulting it to leftover space",
-          "Stack bonus spaces vertically above garages or service areas to make up for what width can't provide",
-          "Zone the plan front-to-back, moving from quiet spaces near the street through to more active living areas",
-          "Design deliberately for light — skylights, courtyards, voids and highlight windows bring daylight deep into a narrow footprint",
-          "Respect the streetscape with a considered, contemporary response rather than a generic wide-block layout squeezed to fit",
+        banner: {
+          src: img("/pub/c0173968/editor-uploaded-image/Narrow Block.png"),
+          alt: "Five Design Moves That Make Narrow Blocks Work",
+          aspect: "1173/701",
+        },
+      },
+      {
+        heading: "1. Use the Rear of the Site Strategically",
+        level: 3,
+        paragraphs: [
+          "On narrow blocks, the rear of the site is often one of the most valuable areas. It may provide opportunities for vehicle access, a garage, private outdoor space, or a secondary living zone.",
+          "Where rear access is available, placing parking or service areas toward the back can free up the front of the home for a stronger street presence and better internal planning.",
+          "A well-designed rear zone can also create a private courtyard, landscaped outlook, or flexible outdoor room that makes the whole home feel larger.",
+        ],
+      },
+      {
+        heading: "2. Stack Bonus Spaces Where They Do Not Disrupt the Main Form",
+        level: 3,
+        paragraphs: [
+          "Narrow homes benefit from efficient vertical planning. Extra spaces such as studies, guest rooms, secondary living areas, roof terraces, or loft zones can often be added above garages or service areas.",
+          "The goal is to gain usable floor area without creating a bulky or awkward building form. When handled carefully, these additional spaces can add major lifestyle value while keeping the home balanced and proportionate.",
+        ],
+      },
+      {
+        heading: "3. Zone the Plan from Front to Back",
+        level: 3,
+        paragraphs: [
+          "Long, narrow homes work best when areas are clearly organised along the length of the site.",
+          "A common approach is to place quieter spaces, such as bedrooms or studies, toward the front, with open-plan living areas positioned toward the rear where they can connect to garden or courtyard spaces.",
+          "This creates a clear rhythm through the home: public to private, quiet to active, enclosed to open. It also helps reduce corridor-like interiors, which can otherwise make narrow homes feel tight.",
+        ],
+      },
+      {
+        heading: "4. Design for Light, Not Width",
+        level: 3,
+        paragraphs: [
+          "One of the biggest misconceptions about narrow blocks is that the home will automatically feel dark or cramped. In reality, light is often more important than width.",
+          "Skylights, courtyards, voids, highlight windows, glazed links, and carefully placed openings can bring natural light deep into the floor plan.",
+          "The best narrow-block homes do not rely only on side windows. Instead, they use light from above, from the rear, and from carefully positioned internal openings to create a bright and open feeling.",
+        ],
+      },
+      {
+        heading: "5. Respect the Streetscape",
+        level: 3,
+        paragraphs: [
+          "In established neighbourhoods, the street character matters. A successful narrow-block home should feel contemporary and functional while still responding to its surroundings.",
+          "This may involve considering roof forms, materials, front setbacks, façade rhythm, landscaping, and the scale of neighbouring homes.",
+          "Good design does not simply copy what is next door. It interprets the local context in a thoughtful way, creating a home that feels new without feeling out of place.",
         ],
       },
       {
         heading: "What to Watch Out For",
-        list: [
-          "Construction access can be tighter and needs to be planned for early",
-          "Setback and overlooking requirements can be more restrictive on narrow sites",
-          "Privacy between close neighbouring boundaries needs careful attention",
-          "Planning requirements vary between councils, so local knowledge matters",
+        paragraphs: [
+          "There are several practical issues to consider before designing or building on a narrow block.",
+          "Construction access can be more complex. Narrow sites may limit space for trades, machinery, storage, and deliveries, which can affect cost and timing.",
+          "Setbacks and overlooking requirements are also important. Small changes to wall positions, window placement, or upper-level design can significantly affect what is possible.",
+          "Privacy should be considered early. On narrow blocks, neighbouring windows, fences, courtyards, and outdoor areas are often close by. Good design protects privacy without creating a closed-in home.",
+          "Planning requirements can also vary depending on the site, council, zoning, overlays, and neighbourhood character controls. Early advice from an experienced designer or architect can help identify opportunities and avoid unnecessary delays.",
         ],
       },
       {
         heading: "A Better Way to Approach Narrow Sites",
         paragraphs: [
-          "Standard house plans rarely translate well to a narrow block. A tailored, site-specific design — one that responds to the block's actual dimensions, orientation and context — consistently outperforms a generic layout that's simply been squeezed to fit.",
+          "The best homes on narrow blocks are not simply standard house plans squeezed into a tight site. They are designed around the block's specific dimensions, orientation, access, outlook, and planning constraints.",
+          "A narrow block needs a tailored response. That means thinking carefully about light, movement, storage, outdoor space, privacy, and how each room connects to the next.",
+          "When these elements are resolved properly, the result can be a home that feels calm, generous, practical, and highly liveable.",
         ],
       },
     ],
     conclusion: [
-      "Narrow blocks need strategic design, not compromise. With the right focus on natural light, zoning, outdoor space and context, they can deliver homes that feel just as generous as their wider neighbours.",
+      "A narrow block does not have to mean a compromised home. With the [right building design](/) approach, it can become the foundation for a thoughtful, efficient, and beautiful place to live.",
+      "The key is to build a design with the site, not against it. Focus on natural light, smart zoning, useful outdoor space, privacy, and a form that respects its surroundings.",
     ],
     faqs: [
       {
-        q: "What counts as a narrow block?",
-        a: "Definitions vary by council, but blocks under roughly 10 to 12 metres wide are generally considered narrow and benefit from a tailored design approach.",
+        q: "What is considered a narrow block in Melbourne?",
+        a: "There is no single width that applies to every property. A block may be considered narrow when its limited frontage affects vehicle access, room arrangement, setbacks, natural light or the placement of windows.",
       },
       {
-        q: "How do you get natural light into a narrow home?",
-        a: "Through deliberate use of skylights, internal courtyards, voids and highlight windows positioned to bring daylight deep into the plan, even where side windows are limited.",
+        q: "Can a narrow block home still receive plenty of natural light?",
+        a: "Yes. Courtyards, skylights, voids, highlight windows and carefully positioned openings can bring daylight deep into a narrow floor plan.",
       },
       {
-        q: "Does building on a narrow block cost more?",
-        a: "It can, depending on access and site conditions, but a well-considered design manages this by planning construction access and buildability from the outset.",
+        q: "Are narrow block homes more expensive to build?",
+        a: "They can involve additional costs due to restricted construction access, customised design, structural requirements and limited space for equipment or materials. Costs depend on the site and project specifications.",
       },
       {
-        q: "Can a narrow block still fit a double garage?",
-        a: "Often yes, depending on width and council setback requirements — it's one of the first things we assess during site analysis.",
+        q: "Do I need a custom design for a narrow block?",
+        a: "A site-specific design is generally more effective than placing a standard floor plan on a narrow block. It allows the home to respond to orientation, access, privacy, setbacks and the block's dimensions.",
       },
       {
-        q: "Do narrow blocks need a custom design, or can I use a standard plan?",
-        a: "A custom, site-specific design almost always performs better on a narrow block than an off-the-shelf plan, which is typically designed for a standard-width lot.",
-      },
-      {
-        q: "Can Manzel Studio help with narrow block designs?",
-        a: "Yes — narrow block design is a regular part of our residential work across Melbourne's established and inner-city suburbs.",
+        q: "Can Manzel Studio help assess a narrow property?",
+        a: "Yes. Manzel Studio can [assess the site](/site-assessment), identify planning and design constraints, develop a tailored [home design](/) and prepare approval-ready documentation.",
       },
     ],
   },

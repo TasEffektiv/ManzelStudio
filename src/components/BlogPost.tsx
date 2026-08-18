@@ -7,6 +7,7 @@ import Reveal from "./Reveal";
 import { blogCategories } from "@/lib/content";
 import { FacebookIcon, XIcon, LinkedinIcon, EmailIcon } from "./icons";
 import type { Article } from "@/lib/blogArticles";
+import { renderRich } from "@/lib/richText";
 
 type Post = {
   title: string;
@@ -18,37 +19,6 @@ type Post = {
 };
 
 const SITE_URL = "https://www.manzelstudio.com";
-
-function renderRich(text: string): React.ReactNode[] {
-  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
-  const nodes: React.ReactNode[] = [];
-  let lastIndex = 0;
-  let match: RegExpExecArray | null;
-  let key = 0;
-  while ((match = regex.exec(text)) !== null) {
-    if (match.index > lastIndex) nodes.push(text.slice(lastIndex, match.index));
-    const [, label, href] = match;
-    const isInternal = href.startsWith("/") || href.includes("manzelstudio.com");
-    nodes.push(
-      isInternal ? (
-        <Link
-          key={key++}
-          href={href.replace(/^https?:\/\/(www\.)?manzelstudio\.com/, "") || "/"}
-          className="underline underline-offset-2 hover:opacity-70"
-        >
-          {label}
-        </Link>
-      ) : (
-        <a key={key++} href={href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-70">
-          {label}
-        </a>
-      )
-    );
-    lastIndex = regex.lastIndex;
-  }
-  if (lastIndex < text.length) nodes.push(text.slice(lastIndex));
-  return nodes;
-}
 
 export default function BlogPost({ post, article }: { post: Post; article: Article }) {
   const shareUrl = `${SITE_URL}${post.href}`;
@@ -161,7 +131,10 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                       {section.heading}
                     </Heading>
                     {section.banner && (
-                      <div className="relative mb-6 w-full overflow-hidden rounded-2xl aspect-[1080/693]">
+                      <div
+                        className="relative mb-6 w-full overflow-hidden rounded-2xl"
+                        style={{ aspectRatio: section.banner.aspect?.replace("/", " / ") ?? "1080 / 693" }}
+                      >
                         <Image
                           src={section.banner.src}
                           alt={section.banner.alt}
