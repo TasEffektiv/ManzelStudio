@@ -33,7 +33,7 @@ export default function WhatWeDesign({
             <Reveal key={c.title} delay={i * 100}>
               <article>
                 <div className="relative mb-6 h-[220px] w-full overflow-hidden md:h-[260px]">
-                  <Image src={c.image} alt={c.title} fill className="object-cover" sizes="(min-width: 640px) 33vw, 100vw" />
+                  <Image src={c.image} alt={c.title} fill quality={70} className="object-cover" sizes="(min-width: 640px) 33vw, 100vw" />
                 </div>
                 <div className="mb-2 text-[12px] font-medium uppercase tracking-[0.18em] text-muted">{c.num}</div>
                 <h3 className="mb-2.5 text-[22px] font-medium leading-[1.25] text-ink">{c.title}</h3>

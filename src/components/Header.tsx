@@ -92,7 +92,7 @@ export default function Header() {
         <div className="hidden items-center xl:flex">
           <a
             href="/contact-us"
-            className="border border-ink px-6 py-2.5 text-[15px] font-medium text-ink transition-colors duration-300 hover:bg-ink hover:text-white"
+            className="border border-ink bg-ink px-6 py-2.5 text-[15px] font-medium text-white transition-colors duration-300 hover:bg-[#242424]"
           >
             Contact Us
           </a>
@@ -144,7 +144,7 @@ export default function Header() {
               )}
             </div>
           ))}
-          <a href="/contact-us" className="my-4 border border-ink px-6 py-2.5 text-center text-[15px] font-medium text-ink">
+          <a href="/contact-us" className="my-4 border border-ink bg-ink px-6 py-2.5 text-center text-[15px] font-medium text-white">
             Contact Us
           </a>
         </nav>

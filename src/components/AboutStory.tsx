@@ -23,6 +23,7 @@ export default function AboutStory({
                 alt="About Us"
                 fill
                 priority
+                quality={70}
                 className="object-cover"
                 sizes="(min-width: 1024px) 28vw, 50vw"
               />
@@ -32,6 +33,7 @@ export default function AboutStory({
                 src={images[1]}
                 alt="About Us"
                 fill
+                quality={70}
                 className="object-cover"
                 sizes="(min-width: 1024px) 28vw, 50vw"
               />

@@ -61,6 +61,7 @@ export default function ProjectsGrid({
                     src={p.image}
                     alt={p.title}
                     fill
+                    quality={70}
                     className="object-cover transition-transform duration-500 ease-in group-hover:scale-105"
                     sizes="(min-width: 640px) 50vw, 100vw"
                   />

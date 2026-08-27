@@ -35,6 +35,7 @@ export default function Hero() {
               fill
               priority={i === 0}
               fetchPriority={i === 0 ? "high" : undefined}
+              quality={70}
               className="object-cover"
               sizes="100vw"
             />
@@ -59,16 +60,20 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 right-6 z-10 flex gap-2">
+      <div className="absolute bottom-6 right-6 z-10 flex">
         {heroSlides.map((src, i) => (
           <button
             key={src}
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => setActive(i)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
-              i === active ? "w-6 bg-white" : "w-1.5 bg-white/50 hover:bg-white/80"
-            }`}
-          />
+            className="group flex h-6 w-6 items-center justify-center"
+          >
+            <span
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === active ? "w-6 bg-white" : "w-1.5 bg-white/50 group-hover:bg-white/80"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </section>

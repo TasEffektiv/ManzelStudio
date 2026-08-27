@@ -100,6 +100,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                     alt={post.title}
                     fill
                     priority
+                    quality={70}
                     className="object-cover"
                     sizes="(min-width: 1024px) 68vw, 100vw"
                   />
@@ -139,6 +140,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                           src={section.banner.src}
                           alt={section.banner.alt}
                           fill
+                          quality={70}
                           className="object-cover"
                           sizes="(min-width: 768px) 900px, 100vw"
                         />
@@ -198,6 +200,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                                   src={col.image.src}
                                   alt={col.image.alt}
                                   fill
+                                  quality={70}
                                   className="object-cover"
                                   sizes="(min-width: 768px) 45vw, 100vw"
                                 />
@@ -321,6 +324,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                               src={section.image.src}
                               alt={section.image.alt}
                               fill
+                              quality={70}
                               className="object-cover"
                               sizes="(min-width: 768px) 45vw, 100vw"
                             />

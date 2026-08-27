@@ -36,6 +36,7 @@ export default function About() {
                   src={src}
                   alt="Manzel Studio building design"
                   fill
+                  quality={70}
                   className="object-cover"
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />

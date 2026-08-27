@@ -13,7 +13,7 @@ export default function ProjectHero({
 }) {
   return (
     <section className="relative flex min-h-[580px] items-end overflow-hidden pb-[100px] pt-[50px] md:min-h-[78vh]">
-      <Image src={image} alt={title} fill priority className="object-cover" sizes="100vw" />
+      <Image src={image} alt={title} fill priority quality={70} className="object-cover" sizes="100vw" />
       <div className="absolute inset-0 bg-black/65" />
       <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 md:px-10">
         <div className="max-w-[780px]">

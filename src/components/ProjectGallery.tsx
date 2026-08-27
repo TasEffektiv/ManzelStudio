@@ -50,6 +50,7 @@ export default function ProjectGallery({
                   src={t.image}
                   alt={t.alt}
                   fill
+                  quality={70}
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(min-width: 640px) 40vw, 100vw"
                 />

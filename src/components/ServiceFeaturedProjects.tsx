@@ -41,6 +41,7 @@ export default function ServiceFeaturedProjects({
                     src={p.image}
                     alt={p.alt}
                     fill
+                    quality={70}
                     className="object-cover transition-transform duration-500 ease-in group-hover:scale-110"
                     sizes="(min-width: 640px) 50vw, 100vw"
                   />
