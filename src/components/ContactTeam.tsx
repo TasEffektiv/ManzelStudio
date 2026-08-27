@@ -17,7 +17,7 @@ export default function ContactTeam() {
             {teamMembers.map((m) => (
               <div key={m.name} className="flex items-center gap-5">
                 <div className="relative h-[60px] w-[60px] shrink-0 overflow-hidden rounded-full">
-                  <Image src={m.image} alt={m.name} fill className="object-cover" />
+                  <Image src={m.image} alt={m.name} fill sizes="60px" className="object-cover" />
                 </div>
                 <div className="text-left">
                   <div className="mb-[5px] text-[22px] font-semibold tracking-[-0.014em] text-black">{m.name}</div>
