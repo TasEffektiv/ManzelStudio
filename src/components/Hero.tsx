@@ -6,10 +6,15 @@ import { heroSlides } from "@/lib/content";
 
 export default function Hero() {
   const [active, setActive] = useState(0);
+  const [revealed, setRevealed] = useState(() => new Set([0]));
 
   useEffect(() => {
     const id = setInterval(() => {
-      setActive((v) => (v + 1) % heroSlides.length);
+      setActive((v) => {
+        const next = (v + 1) % heroSlides.length;
+        setRevealed((prev) => (prev.has(next) ? prev : new Set(prev).add(next)));
+        return next;
+      });
     }, 5000);
     return () => clearInterval(id);
   }, []);
@@ -23,14 +28,17 @@ export default function Hero() {
             i === active ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image
-            src={src}
-            alt=""
-            fill
-            priority={i === 0}
-            className="object-cover"
-            sizes="100vw"
-          />
+          {revealed.has(i) && (
+            <Image
+              src={src}
+              alt=""
+              fill
+              priority={i === 0}
+              fetchPriority={i === 0 ? "high" : undefined}
+              className="object-cover"
+              sizes="100vw"
+            />
+          )}
           <div className="absolute inset-0 bg-black/[0.56]" />
         </div>
       ))}
