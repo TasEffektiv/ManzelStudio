@@ -25,11 +25,11 @@ export const nav = [
 ];
 
 export const heroSlides = [
-  img("/resources/c0173968/albums/album-4/Banner-Img5-copy.png"),
-  img("/resources/c0173968/albums/album-4/Banner-Img4.png"),
-  img("/resources/c0173968/albums/album-4/Banner-Img1.png"),
-  img("/resources/c0173968/albums/album-4/Banner-Img2.png"),
-  img("/resources/c0173968/albums/album-4/Banner-Img3.png"),
+  "/images/hero/hero-1.png",
+  "/images/hero/hero-2.png",
+  "/images/hero/hero-3.png",
+  "/images/hero/hero-4.png",
+  "/images/hero/hero-5.png",
 ];
 
 export const aboutSlides = [
