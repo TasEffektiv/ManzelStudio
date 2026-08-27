@@ -17,6 +17,7 @@ export default function BlogList() {
                       src={post.image}
                       alt={post.title}
                       fill
+                      quality={70}
                       className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
                       sizes="(min-width: 640px) 50vw, 100vw"
                     />

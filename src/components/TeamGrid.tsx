@@ -28,6 +28,7 @@ export default function TeamGrid({
                     src={m.image}
                     alt={m.name}
                     fill
+                    quality={70}
                     className="object-cover"
                     sizes="(min-width: 1024px) 20vw, (min-width: 640px) 33vw, 50vw"
                   />

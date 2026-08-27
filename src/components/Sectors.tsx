@@ -77,6 +77,7 @@ export default function Sectors() {
                   src={s.image}
                   alt={s.title}
                   fill
+                  quality={70}
                   className="object-cover"
                   sizes="(min-width: 1024px) 42vw, 100vw"
                 />

@@ -19,7 +19,7 @@ export default function AssessmentHero({
 }) {
   return (
     <section className="relative flex min-h-[480px] items-center overflow-hidden md:min-h-[600px]">
-      <Image src={image} alt={`${titlePre}${titleEm}`} fill priority className="object-cover" sizes="100vw" />
+      <Image src={image} alt={`${titlePre}${titleEm}`} fill priority quality={70} className="object-cover" sizes="100vw" />
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 py-28 md:px-10">
         <div className="max-w-[720px]">
