@@ -7,10 +7,15 @@ import Reveal from "./Reveal";
 
 export default function About() {
   const [active, setActive] = useState(0);
+  const [revealed, setRevealed] = useState(() => new Set([0]));
 
   useEffect(() => {
     const id = setInterval(() => {
-      setActive((v) => (v + 1) % aboutSlides.length);
+      setActive((v) => {
+        const next = (v + 1) % aboutSlides.length;
+        setRevealed((prev) => (prev.has(next) ? prev : new Set(prev).add(next)));
+        return next;
+      });
     }, 4000);
     return () => clearInterval(id);
   }, []);
@@ -26,13 +31,15 @@ export default function About() {
                 i === active ? "opacity-100" : "opacity-0"
               }`}
             >
-              <Image
-                src={src}
-                alt="Manzel Studio building design"
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
+              {revealed.has(i) && (
+                <Image
+                  src={src}
+                  alt="Manzel Studio building design"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+              )}
             </div>
           ))}
         </Reveal>
