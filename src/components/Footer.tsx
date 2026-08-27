@@ -39,10 +39,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-14 border-b border-white/20 py-16 md:grid-cols-4 md:gap-10">
           <div className="md:col-span-2">
             <Image src={footerLogo} alt="Manzel Studio" width={180} height={44} className="mb-6" />
-            <h5 className="max-w-sm text-[17px] leading-[30px] text-white">
+            <p className="max-w-sm text-[17px] leading-[30px] text-white">
               Manzel Studio is a building design studio committed to creating thoughtful, functional and inspiring
               spaces.
-            </h5>
+            </p>
 
             <h3 className="mt-10 mb-5 text-[20px] font-semibold text-white">Our Office Location</h3>
             <p className="flex items-center gap-3 text-[17px] leading-[30px] text-white">

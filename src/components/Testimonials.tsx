@@ -37,7 +37,7 @@ export default function Testimonials() {
                     {t.quote}
                   </blockquote>
                   <div className="mt-auto border-t border-line pt-[18px]">
-                    <h5 className="mb-0.5 text-[15px] font-medium text-ink">{t.name}</h5>
+                    <p className="mb-0.5 text-[15px] font-medium text-ink">{t.name}</p>
                     <span className="text-[12px] tracking-[0.05em] text-muted">{t.role}</span>
                   </div>
                 </div>
