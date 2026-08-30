@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { blogPosts } from "@/lib/content";
 import Reveal from "./Reveal";
 
@@ -57,12 +58,12 @@ export default function Blog() {
         </div>
 
         <Reveal delay={200} className="mt-16 pb-16 text-center">
-          <a
+          <Link
             href="/blog"
             className="inline-flex h-11 min-w-[220px] items-center justify-center border border-black px-9 text-[17px] font-medium text-black transition-colors duration-500 hover:bg-black hover:text-white"
           >
             Read More
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>
