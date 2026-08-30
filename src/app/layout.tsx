@@ -10,9 +10,9 @@ const albertSans = Albert_Sans({
   display: "swap",
 });
 
-const title = "Manzel Studio | Melbourne Building Designers";
+const title = "Building Designer Melbourne | Manzel Studio";
 const description =
-  "Manzel Studio is a design-led building design studio in Melbourne creating thoughtful, functional and inspiring spaces, from concept to creation.";
+  "Manzel Studio is a Melbourne building designer offering full drafting services for homes and commercial spaces, from concept to creation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

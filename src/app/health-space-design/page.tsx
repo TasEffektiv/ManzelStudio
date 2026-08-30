@@ -32,9 +32,9 @@ import {
   healthCta,
 } from "@/lib/content";
 
-const title = "Health Space Building Designer Melbourne | Manzel Studio";
+const title = "Healthcare Building Designer Melbourne | Manzel Studio";
 const description =
-  "Manzel Studio provides registered building design for health spaces, medical clinics, aged care and NDIS facilities across Melbourne and Victoria. BPC registered.";
+  "Manzel Studio is a Melbourne healthcare building designer providing registered design for medical centres, aged care and NDIS facilities across Victoria. BPC registered.";
 
 export const metadata: Metadata = buildMetadata({
   title,

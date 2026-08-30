@@ -34,7 +34,7 @@ import {
 
 const title = "Commercial Building Designer Melbourne | Manzel Studio";
 const description =
-  "Registered commercial building designers in Melbourne. Offices, retail fit-outs, hospitality and mixed-use developments across Victoria. Book a free consultation today.";
+  "Manzel Studio offers commercial building design and drafting services in Melbourne - offices, retail, industrial, hospitality and mixed-use developments across Victoria.";
 
 export const metadata: Metadata = buildMetadata({
   title,

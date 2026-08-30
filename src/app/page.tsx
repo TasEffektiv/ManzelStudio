@@ -17,9 +17,9 @@ import { buildMetadata, faqJsonLd } from "@/lib/seo";
 import { faqs } from "@/lib/content";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Manzel Studio | Melbourne Building Designers",
+  title: "Building Designer Melbourne | Manzel Studio",
   description:
-    "Manzel Studio is a design-led building design studio in Melbourne creating thoughtful, functional and inspiring spaces, from concept to creation.",
+    "Manzel Studio is a Melbourne building designer offering full drafting services for homes and commercial spaces, from concept to creation.",
   path: "/",
 });
 
