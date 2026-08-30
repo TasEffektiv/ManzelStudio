@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import BlogPost from "@/components/BlogPost";
+import JsonLd from "@/components/JsonLd";
+import { buildMetadata, articleJsonLd } from "@/lib/seo";
 import { blogPosts } from "@/lib/content";
 import { blogArticles } from "@/lib/blogArticles";
 
@@ -20,10 +22,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = blogPosts.find((p) => slugFromHref(p.href) === slug);
   if (!post) return {};
-  return {
+  return buildMetadata({
     title: `${post.title} | Manzel Studio`,
     description: post.excerptLong.slice(0, 155).replace(/\s+\S*$/, "") + "…",
-  };
+    path: post.href,
+    image: post.imageLarge,
+  });
 }
 
 export default async function BlogPostPage({
@@ -36,5 +40,19 @@ export default async function BlogPostPage({
   const article = blogArticles[slug];
   if (!post || !article) notFound();
 
-  return <BlogPost post={post} article={article} />;
+  return (
+    <>
+      <JsonLd
+        data={articleJsonLd({
+          title: post.title,
+          description: post.excerptLong,
+          path: post.href,
+          image: post.imageLarge,
+          datePublished: new Date(post.date).toISOString(),
+          author: post.author,
+        })}
+      />
+      <BlogPost post={post} article={article} />
+    </>
+  );
 }

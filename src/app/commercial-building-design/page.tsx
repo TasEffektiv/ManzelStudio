@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { buildMetadata, serviceJsonLd, faqJsonLd } from "@/lib/seo";
 import ServiceHero from "@/components/ServiceHero";
 import TrustBar from "@/components/TrustBar";
 import ServiceIntro from "@/components/ServiceIntro";
@@ -29,16 +32,29 @@ import {
   commercialCta,
 } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Commercial Building Designer Melbourne | Manzel Studio",
-  description:
-    "Registered commercial building designers in Melbourne. Offices, retail fit-outs, hospitality and mixed-use developments across Victoria. Book a free consultation today.",
-};
+const title = "Commercial Building Designer Melbourne | Manzel Studio";
+const description =
+  "Manzel Studio offers commercial building design and drafting services in Melbourne - offices, retail, industrial, hospitality and mixed-use developments across Victoria.";
+
+export const metadata: Metadata = buildMetadata({
+  title,
+  description,
+  path: "/commercial-building-design",
+});
 
 export default function CommercialBuildingDesign() {
   return (
     <>
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Commercial Building Design",
+          description,
+          path: "/commercial-building-design",
+        })}
+      />
+      <JsonLd data={faqJsonLd(commercialFaqs)} />
       <Header />
+      <Breadcrumbs items={[{ name: "Commercial Building Design", path: "/commercial-building-design" }]} />
       <main className="flex-1">
         <ServiceHero {...commercialHero} />
         <TrustBar items={trustBar} />

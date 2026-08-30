@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "./Header";
+import Breadcrumbs from "./Breadcrumbs";
 import Footer from "./Footer";
 import Faq from "./Faq";
 import Reveal from "./Reveal";
@@ -8,6 +9,7 @@ import { blogCategories } from "@/lib/content";
 import { FacebookIcon, XIcon, LinkedinIcon, EmailIcon } from "./icons";
 import type { Article } from "@/lib/blogArticles";
 import { renderRich } from "@/lib/richText";
+import { SITE_URL } from "@/lib/seo";
 
 type Post = {
   title: string;
@@ -15,10 +17,9 @@ type Post = {
   image: string;
   imageLarge: string;
   date: string;
+  author: string;
   categories: string[];
 };
-
-const SITE_URL = "https://www.manzelstudio.com";
 
 export default function BlogPost({ post, article }: { post: Post; article: Article }) {
   const shareUrl = `${SITE_URL}${post.href}`;
@@ -38,6 +39,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
   return (
     <>
       <Header />
+      <Breadcrumbs items={[{ name: "Blog", path: "/blog" }, { name: post.title, path: post.href }]} />
       <main className="flex-1">
         <section className="bg-white px-6 pb-[90px] pt-[150px] md:px-10">
           <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-x-16 gap-y-14 lg:grid-cols-[1fr_320px]">
@@ -73,7 +75,9 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                     ))}
                   </span>
                   <span className="text-line">•</span>
-                  <span>{post.date}</span>
+                  <span>By {post.author}</span>
+                  <span className="text-line">•</span>
+                  <time dateTime={new Date(post.date).toISOString()}>{post.date}</time>
                   <span className="text-line">•</span>
                   <span className="flex items-center gap-2">
                     Share:

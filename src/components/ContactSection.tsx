@@ -197,6 +197,8 @@ export default function ContactSection({
                 data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="space-y-6"
+                toolname="requestBuildingDesignConsultation"
+                tooldescription="Submit a contact enquiry to Manzel Studio, a Melbourne building design studio, to request a free consultation or ask a question about a residential, commercial, or health-space project. Requires the user to review and click Submit themselves - this tool fills the form but does not send it."
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <p className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden">
@@ -215,6 +217,7 @@ export default function ContactSection({
                       value={form.firstName}
                       onChange={update("firstName")}
                       className={inputClass}
+                      toolparamdescription="The enquirer's first name"
                     />
                   </div>
                   <div>
@@ -226,6 +229,7 @@ export default function ContactSection({
                       value={form.lastName}
                       onChange={update("lastName")}
                       className={inputClass}
+                      toolparamdescription="The enquirer's last name"
                     />
                   </div>
                 </div>
@@ -239,6 +243,7 @@ export default function ContactSection({
                     value={form.email}
                     onChange={update("email")}
                     className={inputClass}
+                    toolparamdescription="The enquirer's email address"
                   />
                 </div>
 
@@ -251,6 +256,7 @@ export default function ContactSection({
                     value={form.phone}
                     onChange={update("phone")}
                     className={inputClass}
+                    toolparamdescription="The enquirer's phone number"
                   />
                 </div>
 
@@ -262,6 +268,7 @@ export default function ContactSection({
                     value={form.address}
                     onChange={update("address")}
                     className={inputClass}
+                    toolparamdescription="The street address of the project site being enquired about, if known"
                   />
                 </div>
 
@@ -287,6 +294,7 @@ export default function ContactSection({
                     value={form.message}
                     onChange={update("message")}
                     className={`${inputClass} resize-none`}
+                    toolparamdescription="What the enquirer wants help with - e.g. project type, goals, or questions for Manzel Studio"
                   />
                 </div>
 
