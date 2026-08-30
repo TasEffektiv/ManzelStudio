@@ -215,6 +215,7 @@ export const blogPosts = [
       "/resources/c0173968/blog-post/post-25/600-EssentialStepstoPerformanArchitecturalSiteAnalysisforaNewBuildingProject.png"
     ),
     date: "Tue, 14 Jul 2026",
+    author: "Manzel Studio",
     excerpt:
       "Every successful building begins with a thorough understanding of the site. Before sketches, floor plans, or 3D mo...",
     excerptLong:
@@ -232,6 +233,7 @@ export const blogPosts = [
       "/resources/c0173968/blog-post/post-22/450-BuildingDesignervsArchitectvsDraftsman.png"
     ),
     date: "Wed, 24 Jun 2026",
+    author: "Manzel Studio",
     excerpt:
       "If you're planning a new home, renovation, extension, townhouse development or commercial project, one of the first deci...",
     excerptLong:
@@ -255,6 +257,7 @@ export const blogPosts = [
       "/resources/c0173968/blog-post/post-19/450-commercial-building-design-trends-melbourne(1).png"
     ),
     date: "Sun, 14 Jun 2026",
+    author: "Manzel Studio",
     excerpt:
       "Commercial buildings have evolved significantly over the past decade. Today's businesses require spaces that do more tha...",
     excerptLong:
@@ -271,6 +274,7 @@ export const blogPosts = [
       "/resources/c0173968/blog-post/post-16/450-ManzelStudioLaunchesPurpose-DrivenBuildingDesignServicesinMelbourne.png"
     ),
     date: "Wed, 13 May 2026",
+    author: "Manzel Studio",
     excerpt:
       "Manzel Studio provides purpose-driven building design services in Melbourne for residential, commercial and health space...",
     excerptLong:
@@ -283,6 +287,7 @@ export const blogPosts = [
     image: img("/resources/c0173968/blog-post/post-13/300-600-NarrowBlock(1).png"),
     imageLarge: img("/resources/c0173968/blog-post/post-13/450-600-NarrowBlock(1).png"),
     date: "Tue, 12 May 2026",
+    author: "Manzel Studio",
     excerpt:
       "If you've bought, inherited, or are eyeing a long, narrow block, you've probably been told it is \"tricky.\" Maybe even th...",
     excerptLong:
@@ -295,6 +300,7 @@ export const blogPosts = [
     image: img("/resources/c0173968/blog-post/post-10/300-HowtoGetaPlanningPermitApprovedFaster.png"),
     imageLarge: img("/resources/c0173968/blog-post/post-10/450-HowtoGetaPlanningPermitApprovedFaster.png"),
     date: "Sun, 10 May 2026",
+    author: "Manzel Studio",
     excerpt:
       "If you are planning a new home, an extension, a renovation, a multi-unit development, or a commercial project, the planning permit process can feel slow and unc...",
     excerptLong:

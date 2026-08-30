@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { buildMetadata, serviceJsonLd, faqJsonLd } from "@/lib/seo";
 import ServiceHero from "@/components/ServiceHero";
 import TrustBar from "@/components/TrustBar";
 import ServiceIntro from "@/components/ServiceIntro";
@@ -29,16 +32,29 @@ import {
   healthCta,
 } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Health Space Building Designer Melbourne | Manzel Studio",
-  description:
-    "Manzel Studio provides registered building design for health spaces, medical clinics, aged care and NDIS facilities across Melbourne and Victoria. BPC registered.",
-};
+const title = "Health Space Building Designer Melbourne | Manzel Studio";
+const description =
+  "Manzel Studio provides registered building design for health spaces, medical clinics, aged care and NDIS facilities across Melbourne and Victoria. BPC registered.";
+
+export const metadata: Metadata = buildMetadata({
+  title,
+  description,
+  path: "/health-space-design",
+});
 
 export default function HealthSpaceDesign() {
   return (
     <>
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Health Space Building Design",
+          description,
+          path: "/health-space-design",
+        })}
+      />
+      <JsonLd data={faqJsonLd(healthFaqs)} />
       <Header />
+      <Breadcrumbs items={[{ name: "Health Space Design", path: "/health-space-design" }]} />
       <main className="flex-1">
         <ServiceHero {...healthHero} />
         <TrustBar items={trustBar} />

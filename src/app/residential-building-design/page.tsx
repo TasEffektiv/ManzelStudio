@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import JsonLd from "@/components/JsonLd";
+import { buildMetadata, serviceJsonLd, faqJsonLd } from "@/lib/seo";
 import ServiceHero from "@/components/ServiceHero";
 import TrustBar from "@/components/TrustBar";
 import ServiceIntro from "@/components/ServiceIntro";
@@ -29,16 +32,29 @@ import {
   residentialCta,
 } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Residential Building Designer Melbourne | Manzel Studio",
-  description:
-    "Manzel Studio is a registered Melbourne-based designer and draftsperson, specialising in custom homes, extensions, townhouses, & dual occupancy across Victoria.",
-};
+const title = "Residential Building Designer Melbourne | Manzel Studio";
+const description =
+  "Manzel Studio is a registered Melbourne-based designer and draftsperson, specialising in custom homes, extensions, townhouses, & dual occupancy across Victoria.";
+
+export const metadata: Metadata = buildMetadata({
+  title,
+  description,
+  path: "/residential-building-design",
+});
 
 export default function ResidentialBuildingDesign() {
   return (
     <>
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Residential Building Design",
+          description,
+          path: "/residential-building-design",
+        })}
+      />
+      <JsonLd data={faqJsonLd(residentialFaqs)} />
       <Header />
+      <Breadcrumbs items={[{ name: "Residential Building Design", path: "/residential-building-design" }]} />
       <main className="flex-1">
         <ServiceHero {...residentialHero} />
         <TrustBar items={trustBar} />
