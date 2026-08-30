@@ -59,6 +59,7 @@ export default function Sectors() {
             </div>
             <a
               href={sector.href}
+              aria-label={`Read more about ${sector.title}`}
               className="inline-flex h-11 items-center justify-center border border-black px-9 text-[17px] font-medium text-black transition-colors duration-500 hover:bg-black hover:text-white"
             >
               Read More

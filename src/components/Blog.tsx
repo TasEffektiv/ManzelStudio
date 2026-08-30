@@ -48,6 +48,7 @@ export default function Blog() {
                 <p className="mb-3 text-[15px] leading-[24px] text-ink-2">{post.excerpt}</p>
                 <a
                   href={post.href}
+                  aria-label={`Read more: ${post.title}`}
                   className="text-[14px] font-medium uppercase tracking-[0.02em] text-black no-underline transition-opacity duration-300 hover:opacity-60"
                 >
                   read more
@@ -60,6 +61,7 @@ export default function Blog() {
         <Reveal delay={200} className="mt-16 pb-16 text-center">
           <Link
             href="/blog"
+            aria-label="Read more articles on the studio blog"
             className="inline-flex h-11 min-w-[220px] items-center justify-center border border-black px-9 text-[17px] font-medium text-black transition-colors duration-500 hover:bg-black hover:text-white"
           >
             Read More
