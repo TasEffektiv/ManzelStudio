@@ -203,7 +203,23 @@ export const testimonials = [
   },
 ];
 
-export const blogPosts = [
+export type BlogPost = {
+  title: string;
+  href: string;
+  image: string;
+  imageLarge: string;
+  date: string;
+  author: string;
+  excerpt: string;
+  excerptLong: string;
+  categories: string[];
+  metaTitle?: string;
+  metaDescription?: string;
+  imageAlt?: string;
+  keywords?: string[];
+};
+
+export const blogPosts: BlogPost[] = [
   {
     title:
       "Essential Steps to Perform an Architectural Site Analysis for a New Building Project",
@@ -307,7 +323,35 @@ export const blogPosts = [
       "If you are planning a new home, an extension, a renovation, a multi-unit development, or a commercial project, the planning permit process can feel slow and unc...",
     categories: ["commercial-design", "planning-permits"],
   },
-];
+  {
+    title: "Custom Home Design Checklist: What to Consider Before Building Your Dream Home",
+    href: "/blog/custom-home-design-checklist",
+    image: "/images/blog/custom-home-design-checklist.png",
+    imageLarge: "/images/blog/custom-home-design-checklist.png",
+    date: "Mon, 31 Aug 2026",
+    author: "Manzel Studio",
+    excerpt:
+      "Designing a custom home lets you create a space around the way you actually live. But with decisions ranging from your floor plan and room siz...",
+    excerptLong:
+      "Planning your dream home? Use our custom home design checklist covering floor plans, kitchens, storage, finishes, lighting, technology, energy efficiency and more.",
+    categories: ["residential-design", "planning-permits"],
+    metaTitle: "Custom Home Design Checklist (2026 Guide) | Manzel Studio",
+    metaDescription:
+      "Planning a custom home? Use this design checklist covering floor plans, budget, storage, lighting and energy efficiency before you start building.",
+    imageAlt:
+      "Custom Home Design Checklist infographic showing a modern house render, floor plans, and a checklist notepad with budget, location, lifestyle needs, floor plan, design style, materials, timeline and future needs",
+    keywords: [
+      "custom home design checklist",
+      "dream home design checklist",
+      "new home design checklist",
+      "custom home checklist",
+      "designing a custom home",
+      "home building checklist",
+      "custom home design",
+      "things to consider when designing a house",
+    ],
+  },
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export const blogCategories = [
   {

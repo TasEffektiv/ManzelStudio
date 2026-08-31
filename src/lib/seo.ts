@@ -20,6 +20,7 @@ export const ORG_SAME_AS = [
 ];
 
 export function absoluteUrl(path: string) {
+  if (/^https?:\/\//.test(path)) return path;
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
@@ -33,17 +34,20 @@ export function buildMetadata({
   description,
   path,
   image,
+  keywords,
 }: {
   title: string;
   description: string;
   path: string;
   image?: string;
+  keywords?: string[];
 }): Metadata {
   const url = absoluteUrl(path);
-  const ogImage = image ?? DEFAULT_OG_IMAGE;
+  const ogImage = absoluteUrl(image ?? DEFAULT_OG_IMAGE);
   return {
     title,
     description,
+    ...(keywords && keywords.length ? { keywords } : {}),
     alternates: { canonical: url },
     openGraph: {
       title,
@@ -132,6 +136,8 @@ export function articleJsonLd({
   image,
   datePublished,
   author = SITE_NAME,
+  section,
+  keywords,
 }: {
   title: string;
   description: string;
@@ -139,17 +145,22 @@ export function articleJsonLd({
   image: string;
   datePublished: string;
   author?: string;
+  section?: string;
+  keywords?: string[];
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description,
-    image,
+    image: absoluteUrl(image),
     datePublished,
     dateModified: datePublished,
+    inLanguage: "en-AU",
     author: { "@type": "Organization", name: author, url: SITE_URL },
     publisher: { "@id": `${SITE_URL}/#organization` },
     mainEntityOfPage: absoluteUrl(path),
+    ...(section ? { articleSection: section } : {}),
+    ...(keywords && keywords.length ? { keywords: keywords.join(", ") } : {}),
   };
 }

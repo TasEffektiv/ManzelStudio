@@ -3,7 +3,6 @@ import Link from "next/link";
 import Header from "./Header";
 import Breadcrumbs from "./Breadcrumbs";
 import Footer from "./Footer";
-import Faq from "./Faq";
 import Reveal from "./Reveal";
 import { blogCategories } from "@/lib/content";
 import { FacebookIcon, XIcon, LinkedinIcon, EmailIcon } from "./icons";
@@ -19,6 +18,7 @@ type Post = {
   date: string;
   author: string;
   categories: string[];
+  imageAlt?: string;
 };
 
 export default function BlogPost({ post, article }: { post: Post; article: Article }) {
@@ -41,7 +41,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
       <Header />
       <Breadcrumbs items={[{ name: "Blog", path: "/blog" }, { name: post.title, path: post.href }]} />
       <main className="flex-1">
-        <section className="bg-white px-6 pb-[90px] pt-[150px] md:px-10">
+        <section className="bg-white px-6 pb-[90px] pt-[50px] md:px-10 md:pt-[70px]">
           <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-x-16 gap-y-14 lg:grid-cols-[1fr_320px]">
             <div>
               <Reveal>
@@ -101,7 +101,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                 <div className="relative mb-12 aspect-video w-full overflow-hidden">
                   <Image
                     src={post.imageLarge}
-                    alt={post.title}
+                    alt={post.imageAlt ?? post.title}
                     fill
                     priority
                     quality={70}
@@ -355,6 +355,38 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                 );
               })}
 
+              {article.faqs && article.faqs.length > 0 && (
+                <Reveal delay={20}>
+                  <div className="mt-12">
+                    <h2 className="mb-3 text-[24px] font-bold leading-[1.3] tracking-[-0.02em] text-black md:text-[28px] md:leading-[40px]">
+                      Frequently Asked Questions
+                    </h2>
+                    {article.faqs.map((faq, i) => (
+                      <div key={i} className="mt-4">
+                        <h3 className="mb-2 text-[18px] font-bold leading-[1.3] tracking-[-0.01em] text-black md:text-[21px] md:leading-[38px]">
+                          {faq.q}
+                        </h3>
+                        <p className="mb-4 text-[16px] leading-[28px] text-black">{renderRich(faq.a)}</p>
+                      </div>
+                    ))}
+                  </div>
+                </Reveal>
+              )}
+
+              {article.conclusion && (
+                <Reveal delay={20}>
+                  <div className="mt-12">
+                    <h2 className="mb-3 text-[24px] font-bold leading-[1.3] tracking-[-0.02em] text-black md:text-[28px] md:leading-[40px]">
+                      Conclusion
+                    </h2>
+                    {article.conclusion.map((p, i) => (
+                      <p key={i} className="mb-4 text-[16px] leading-[28px] text-black">
+                        {renderRich(p)}
+                      </p>
+                    ))}
+                  </div>
+                </Reveal>
+              )}
             </div>
 
             <Reveal delay={100}>
@@ -375,28 +407,6 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
             </Reveal>
           </div>
         </section>
-
-        <Faq
-          items={article.faqs}
-          lead={`Common questions about ${post.title.replace(/\.$/, "").toLowerCase()}, answered by the Manzel Studio team.`}
-        />
-
-        {article.conclusion && (
-          <section className="bg-[#fbfbfb] px-6 pb-[100px] md:px-10">
-            <Reveal>
-              <div className="mx-auto max-w-[900px]">
-                <h2 className="mb-4 text-[24px] font-semibold leading-[1.3] tracking-[-0.01em] text-black md:text-[28px]">
-                  Conclusion
-                </h2>
-                {article.conclusion.map((p, i) => (
-                  <p key={i} className="mb-4 text-[16px] leading-[28px] text-black">
-                    {renderRich(p)}
-                  </p>
-                ))}
-              </div>
-            </Reveal>
-          </section>
-        )}
       </main>
       <Footer />
     </>

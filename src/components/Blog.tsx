@@ -20,7 +20,7 @@ export default function Blog() {
         </Reveal>
 
         <div className="flex flex-wrap justify-center gap-x-10 gap-y-[60px]">
-          {blogPosts.map((post, i) => (
+          {blogPosts.slice(0, 6).map((post, i) => (
             <Reveal
               key={post.href}
               delay={i * 60}
@@ -31,7 +31,7 @@ export default function Blog() {
                   <div className="relative aspect-video w-full overflow-hidden">
                     <Image
                       src={post.image}
-                      alt={post.title}
+                      alt={post.imageAlt ?? post.title}
                       fill
                       quality={70}
                       className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
