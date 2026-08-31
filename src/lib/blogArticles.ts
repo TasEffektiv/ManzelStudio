@@ -1233,7 +1233,7 @@ export const blogArticles: Record<string, Article> = {
         ],
         paragraphs: [
           "Separate your requirements into must-haves, nice-to-haves and future possibilities.",
-          "This gives your designer and builder a much clearer brief - [book a free consultation](/contact-us) if you'd like help working through it - and can make it easier to prioritise decisions when working within a budget.",
+          "This gives your designer and builder a much clearer brief and can make it easier to prioritise decisions when working within a budget.",
         ],
       },
       {
@@ -1618,7 +1618,7 @@ export const blogArticles: Record<string, Article> = {
           { label: "Site & External Costs", items: ["Landscaping", "Driveway", "Fencing", "Site costs", "Utility connections"] },
         ],
         paragraphs: [
-          "Ask for clarification whenever something is unclear - [get in touch](/contact-us) if you'd like a second opinion on a quote.",
+          "Ask for clarification whenever something is unclear, and get a second opinion on your quote if anything feels vague.",
           "The more selections that can be confirmed before construction begins, the easier it becomes to understand your actual project cost.",
         ],
       },
@@ -1644,7 +1644,7 @@ export const blogArticles: Record<string, Article> = {
       "A successful custom home starts well before construction.",
       "Taking the time to understand your site, define your priorities and work through each design decision can help create a home that looks great while functioning naturally for the way you live.",
       "Most importantly, involve your designer and builder early. Experienced professionals can help identify opportunities, constraints and potential costs before decisions become expensive to change. Browse [our recent projects](/our-projects) for inspiration, or [get in touch](/contact-us) to talk through your own.",
-      "With a clear brief and a comprehensive custom home design checklist, you can approach the design process with greater confidence and move one step closer to creating a [home that genuinely feels like your own](/residential-building-design).",
+      "With a clear brief and a comprehensive custom home design checklist, you can approach the design process with greater confidence and move one step closer to creating a home that genuinely feels like your own.",
     ],
     faqs: [
       {
