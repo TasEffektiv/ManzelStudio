@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Albert_Sans } from "next/font/google";
 import JsonLd from "@/components/JsonLd";
+import Analytics from "@/components/Analytics";
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, organizationJsonLd } from "@/lib/seo";
 import "./globals.css";
 
@@ -34,6 +35,12 @@ export const metadata: Metadata = {
     description,
     images: [DEFAULT_OG_IMAGE],
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+    other: process.env.NEXT_PUBLIC_AHREFS_VERIFICATION
+      ? { "ahrefs-site-verification": process.env.NEXT_PUBLIC_AHREFS_VERIFICATION }
+      : undefined,
+  },
 };
 
 export default function RootLayout({
@@ -43,6 +50,7 @@ export default function RootLayout({
     <html lang="en" className={`${albertSans.variable}`}>
       <body className="antialiased min-h-screen flex flex-col">
         <JsonLd data={organizationJsonLd()} />
+        <Analytics />
         {children}
       </body>
     </html>
