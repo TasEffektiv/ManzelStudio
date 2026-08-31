@@ -23,8 +23,8 @@ export async function generateMetadata({
   const post = blogPosts.find((p) => slugFromHref(p.href) === slug);
   if (!post) return {};
   return buildMetadata({
-    title: `${post.title} | Manzel Studio`,
-    description: post.excerptLong.slice(0, 155).replace(/\s+\S*$/, "") + "…",
+    title: post.metaTitle ?? `${post.title} | Manzel Studio`,
+    description: post.metaDescription ?? post.excerptLong.slice(0, 155).replace(/\s+\S*$/, "") + "…",
     path: post.href,
     image: post.imageLarge,
   });

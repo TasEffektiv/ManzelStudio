@@ -20,6 +20,7 @@ export const ORG_SAME_AS = [
 ];
 
 export function absoluteUrl(path: string) {
+  if (/^https?:\/\//.test(path)) return path;
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
@@ -40,7 +41,7 @@ export function buildMetadata({
   image?: string;
 }): Metadata {
   const url = absoluteUrl(path);
-  const ogImage = image ?? DEFAULT_OG_IMAGE;
+  const ogImage = absoluteUrl(image ?? DEFAULT_OG_IMAGE);
   return {
     title,
     description,
@@ -145,7 +146,7 @@ export function articleJsonLd({
     "@type": "Article",
     headline: title,
     description,
-    image,
+    image: absoluteUrl(image),
     datePublished,
     dateModified: datePublished,
     author: { "@type": "Organization", name: author, url: SITE_URL },
