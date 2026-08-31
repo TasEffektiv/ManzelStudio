@@ -324,10 +324,8 @@ export const blogPosts: BlogPost[] = [
   {
     title: "Custom Home Design Checklist: What to Consider Before Building Your Dream Home",
     href: "/blog/custom-home-design-checklist",
-    // TODO: placeholder image reused from an existing project photo - replace with a
-    // dedicated image before publishing.
-    image: "/images/projects/preston.png",
-    imageLarge: "/images/projects/preston.png",
+    image: "/images/blog/custom-home-design-checklist.png",
+    imageLarge: "/images/blog/custom-home-design-checklist.png",
     date: "Mon, 31 Aug 2026",
     author: "Manzel Studio",
     excerpt:
