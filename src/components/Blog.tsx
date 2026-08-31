@@ -20,7 +20,7 @@ export default function Blog() {
         </Reveal>
 
         <div className="flex flex-wrap justify-center gap-x-10 gap-y-[60px]">
-          {blogPosts.map((post, i) => (
+          {blogPosts.slice(0, 6).map((post, i) => (
             <Reveal
               key={post.href}
               delay={i * 60}
