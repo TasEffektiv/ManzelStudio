@@ -45,7 +45,7 @@ export default function Header() {
             >
               <a
                 href={item.href}
-                className="relative flex items-center gap-1.5 pb-[27px] pt-1 text-[17px] text-ink after:absolute after:bottom-0 after:left-1/2 after:right-1/2 after:h-[3px] after:bg-ink after:transition-all after:duration-300 hover:after:left-0 hover:after:right-0"
+                className="relative flex h-[58px] items-center gap-1.5 text-[21px] text-ink after:absolute after:bottom-0 after:left-1/2 after:right-1/2 after:h-[3px] after:bg-ink after:transition-all after:duration-300 hover:after:left-0 hover:after:right-0"
               >
                 {item.label}
                 {item.children && (
@@ -92,7 +92,7 @@ export default function Header() {
         <div className="hidden items-center xl:flex">
           <a
             href="/contact-us"
-            className="border border-ink bg-ink px-6 py-2.5 text-[15px] font-medium text-white transition-colors duration-300 hover:bg-[#242424]"
+            className="border border-ink bg-ink px-6 py-2.5 text-[19px] font-medium text-white transition-colors duration-300 hover:bg-[#242424]"
           >
             Contact Us
           </a>
