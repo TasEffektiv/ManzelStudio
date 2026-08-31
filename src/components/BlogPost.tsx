@@ -41,7 +41,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
       <Header />
       <Breadcrumbs items={[{ name: "Blog", path: "/blog" }, { name: post.title, path: post.href }]} />
       <main className="flex-1">
-        <section className="bg-white px-6 pb-[90px] pt-[150px] md:px-10">
+        <section className="bg-white px-6 pb-[90px] pt-[50px] md:px-10 md:pt-[70px]">
           <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-x-16 gap-y-14 lg:grid-cols-[1fr_320px]">
             <div>
               <Reveal>
