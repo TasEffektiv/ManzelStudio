@@ -19,6 +19,7 @@ type Post = {
   date: string;
   author: string;
   categories: string[];
+  imageAlt?: string;
 };
 
 export default function BlogPost({ post, article }: { post: Post; article: Article }) {
@@ -101,7 +102,7 @@ export default function BlogPost({ post, article }: { post: Post; article: Artic
                 <div className="relative mb-12 aspect-video w-full overflow-hidden">
                   <Image
                     src={post.imageLarge}
-                    alt={post.title}
+                    alt={post.imageAlt ?? post.title}
                     fill
                     priority
                     quality={70}

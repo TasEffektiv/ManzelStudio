@@ -215,6 +215,8 @@ export type BlogPost = {
   categories: string[];
   metaTitle?: string;
   metaDescription?: string;
+  imageAlt?: string;
+  keywords?: string[];
 };
 
 export const blogPosts: BlogPost[] = [
@@ -333,11 +335,23 @@ export const blogPosts: BlogPost[] = [
     excerptLong:
       "Planning your dream home? Use our custom home design checklist covering floor plans, kitchens, storage, finishes, lighting, technology, energy efficiency and more.",
     categories: ["residential-design", "planning-permits"],
-    metaTitle: "Custom Home Design Checklist: Complete Guide for 2026 | Manzel Studio",
+    metaTitle: "Custom Home Design Checklist (2026 Guide) | Manzel Studio",
     metaDescription:
-      "Planning your dream home? Use our custom home design checklist covering floor plans, kitchens, storage, finishes, lighting, technology, energy efficiency and more.",
+      "Planning a custom home? Use this design checklist covering floor plans, budget, storage, lighting and energy efficiency before you start building.",
+    imageAlt:
+      "Custom Home Design Checklist infographic showing a modern house render, floor plans, and a checklist notepad with budget, location, lifestyle needs, floor plan, design style, materials, timeline and future needs",
+    keywords: [
+      "custom home design checklist",
+      "dream home design checklist",
+      "new home design checklist",
+      "custom home checklist",
+      "designing a custom home",
+      "home building checklist",
+      "custom home design",
+      "things to consider when designing a house",
+    ],
   },
-];
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export const blogCategories = [
   {

@@ -31,7 +31,7 @@ export default function Blog() {
                   <div className="relative aspect-video w-full overflow-hidden">
                     <Image
                       src={post.image}
-                      alt={post.title}
+                      alt={post.imageAlt ?? post.title}
                       fill
                       quality={70}
                       className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
