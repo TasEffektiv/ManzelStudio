@@ -1,6 +1,6 @@
-const IMG_BASE = "https://www.manzelstudio.com";
+const IMG_BASE = "";
 
-export const img = (path: string) => `${IMG_BASE}${path}`;
+export const img = (path: string) => `${IMG_BASE}${path.replace("/c0173968/", "/")}`;
 
 export const nav = [
   { label: "Home", href: "/" },
@@ -1040,7 +1040,7 @@ export const healthProjects = [
     title: "Noble Park /Medical Clinic",
   },
   {
-    image: img("/pub/c0173968/editor-uploaded-image//project-slider-3.png"),
+    image: img("/pub/c0173968/editor-uploaded-image/project-slider-3.png"),
     alt: "Rymer Avenue, Safety Beach",
     loc: "Merri-bek",
     type: "HEALTH SPACE",
