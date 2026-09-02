@@ -568,7 +568,7 @@ export const footerNav = [
   { label: "Commercial", href: "/commercial-building-design" },
   { label: "Health Spaces", href: "/health-space-design" },
   { label: "Assessment", href: "/site-assessment" },
-  { label: "Contact Us", href: "/contact-us2" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 
 export const socials = [
