@@ -15,7 +15,7 @@ export default function AssessmentHero({
   titleEm: string;
   lead: string;
   primaryCta: { label: string; href: string };
-  secondaryCta: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
 }) {
   return (
     <section className="relative flex min-h-[480px] items-center overflow-hidden md:min-h-[600px]">
@@ -35,12 +35,14 @@ export default function AssessmentHero({
             <a href={primaryCta.href} className="btn-fill">
               {primaryCta.label} <span className="arr" />
             </a>
-            <a
-              href={secondaryCta.href}
-              className="flex h-[54px] items-center gap-3.5 border border-white px-8 text-[11px] font-medium uppercase tracking-[0.22em] text-white transition-colors duration-300 hover:bg-white hover:text-ink"
-            >
-              {secondaryCta.label}
-            </a>
+            {secondaryCta && (
+              <a
+                href={secondaryCta.href}
+                className="flex h-[54px] items-center gap-3.5 border border-white px-8 text-[11px] font-medium uppercase tracking-[0.22em] text-white transition-colors duration-300 hover:bg-white hover:text-ink"
+              >
+                {secondaryCta.label}
+              </a>
+            )}
           </div>
         </div>
       </div>

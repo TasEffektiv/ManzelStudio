@@ -20,7 +20,14 @@ export const nav = [
     href: "#",
     children: [{ label: "The Avenue", href: "/project-coburg-the-avenue" }],
   },
-  { label: "About Us", href: "/about-us" },
+  {
+    label: "About",
+    href: "#",
+    children: [
+      { label: "About Us", href: "/about-us" },
+      { label: "Testimonials", href: "/testimonials" },
+    ],
+  },
   { label: "Blog", href: "/blog" },
 ];
 
@@ -1217,8 +1224,7 @@ export const siteAssessmentHero = {
   titlePre: "Get your site assessed in up to 5 ",
   titleEm: "working days.",
   lead: "We identify the key restrictions, opportunities — such as how many dwellings your block can fit — and outline estimated costs for a Town Planning and Subdivision permit. Available for residential sites across Victoria.",
-  primaryCta: { label: "Order Assessment", href: "/contact-us" },
-  secondaryCta: { label: "Book a Consultation", href: "tel:0411847852" },
+  primaryCta: { label: "Explore Our Packages", href: "#options" },
 };
 
 export const siteAssessmentTrustBar = [
@@ -1443,8 +1449,7 @@ export const siteAssessmentCta = {
   titleEm: "",
   titlePost: "",
   body: "Secure your Site Assessment today. Get the clear, reliable insights you need to map out your development options — long before you commit to expensive design fees.",
-  primaryCta: { label: "Order Assessment", href: "/contact-us" },
-  secondaryCta: { label: "Book a Consultation", href: "tel:0411847852" },
+  primaryCta: { label: "Explore Our Packages", href: "#options" },
 };
 
 // ===== Our Projects page =====

@@ -15,7 +15,7 @@ export default function ServiceCta({
   titlePost: string;
   body: string;
   primaryCta: { label: string; href: string };
-  secondaryCta: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
 }) {
   return (
     <section className="bg-ink px-6 py-[100px] text-center text-white md:py-[130px]">
@@ -34,12 +34,14 @@ export default function ServiceCta({
             <a href={primaryCta.href} className="btn-fill">
               {primaryCta.label} <span className="arr" />
             </a>
-            <a
-              href={secondaryCta.href}
-              className="flex h-[54px] items-center gap-3.5 border border-white px-8 text-[11px] font-medium uppercase tracking-[0.22em] text-white transition-colors duration-300 hover:bg-white hover:text-ink"
-            >
-              {secondaryCta.label}
-            </a>
+            {secondaryCta && (
+              <a
+                href={secondaryCta.href}
+                className="flex h-[54px] items-center gap-3.5 border border-white px-8 text-[11px] font-medium uppercase tracking-[0.22em] text-white transition-colors duration-300 hover:bg-white hover:text-ink"
+              >
+                {secondaryCta.label}
+              </a>
+            )}
           </div>
         </div>
       </Reveal>

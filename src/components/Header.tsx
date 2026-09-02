@@ -31,7 +31,7 @@ export default function Header() {
             width={269}
             height={66}
             priority
-            className="h-auto w-[150px] sm:w-[200px] xl:w-[269px]"
+            className="h-auto w-[150px] sm:w-[200px] xl:w-[200px] 2xl:w-[269px]"
           />
         </Link>
 
@@ -39,13 +39,13 @@ export default function Header() {
           {nav.map((item) => (
             <div
               key={item.label}
-              className="group relative px-[22px]"
+              className="group relative shrink-0 px-3 2xl:px-[22px]"
               onMouseEnter={() => item.children && setOpenDropdown(item.label)}
               onMouseLeave={() => item.children && setOpenDropdown(null)}
             >
               <a
                 href={item.href}
-                className="relative flex h-[58px] items-center gap-1.5 text-[21px] text-ink after:absolute after:bottom-0 after:left-1/2 after:right-1/2 after:h-[3px] after:bg-ink after:transition-all after:duration-300 hover:after:left-0 hover:after:right-0"
+                className="relative flex h-[58px] items-center gap-1.5 whitespace-nowrap text-[17px] text-ink after:absolute after:bottom-0 after:left-1/2 after:right-1/2 after:h-[3px] after:bg-ink after:transition-all after:duration-300 hover:after:left-0 hover:after:right-0 2xl:text-[21px]"
               >
                 {item.label}
                 {item.children && (
@@ -89,10 +89,10 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center xl:flex">
+        <div className="hidden shrink-0 items-center xl:flex">
           <a
             href="/contact-us"
-            className="border border-ink bg-ink px-6 py-2.5 text-[19px] font-medium text-white transition-colors duration-300 hover:bg-[#242424]"
+            className="whitespace-nowrap border border-ink bg-ink px-5 py-2.5 text-[16px] font-medium text-white transition-colors duration-300 hover:bg-[#242424] 2xl:px-6 2xl:text-[19px]"
           >
             Contact Us
           </a>
