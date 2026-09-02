@@ -117,6 +117,38 @@ export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
   };
 }
 
+export function aggregateRatingJsonLd({
+  ratingValue,
+  reviewCount,
+  reviews = [],
+}: {
+  ratingValue: number;
+  reviewCount: number;
+  reviews?: { name: string; quote: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${SITE_URL}/#organization`,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue,
+      reviewCount,
+      bestRating: 5,
+    },
+    ...(reviews.length
+      ? {
+          review: reviews.map((r) => ({
+            "@type": "Review",
+            author: { "@type": "Person", name: r.name },
+            reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+            reviewBody: r.quote,
+          })),
+        }
+      : {}),
+  };
+}
+
 export function faqJsonLd(items: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",

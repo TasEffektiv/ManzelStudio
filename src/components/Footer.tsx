@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { footerLogo, footerNav, memberBadges, socials } from "@/lib/content";
+import { footerLogo, footerNav, memberBadges, socials, teamMembers } from "@/lib/content";
 import { InstagramIcon, LinkedinIcon, PinterestIcon, XIcon } from "./icons";
 
 const socialIcons: Record<string, React.ReactNode> = {
@@ -63,12 +63,17 @@ export default function Footer() {
             <a href="mailto:info@manzelstudio.com" className="block pb-5 text-[20px] tracking-[-0.014em] text-white transition-colors duration-500 hover:text-white/70">
               info@manzelstudio.com
             </a>
-            <a href="tel:0411847852" className="block pb-5 text-[20px] tracking-[-0.014em] text-white transition-colors duration-500 hover:text-white/70">
-              0411 847852
-            </a>
-            <a href="tel:0478162166" className="block text-[20px] tracking-[-0.014em] text-white transition-colors duration-500 hover:text-white/70">
-              0478 162 166
-            </a>
+            {teamMembers.map((m, i) => (
+              <div key={m.name} className={i < teamMembers.length - 1 ? "pb-5" : ""}>
+                <div className="mb-0.5 text-[13px] tracking-[0.02em] text-white/50">{m.name}</div>
+                <a
+                  href={m.phoneHref}
+                  className="block text-[20px] tracking-[-0.014em] text-white transition-colors duration-500 hover:text-white/70"
+                >
+                  {m.phone}
+                </a>
+              </div>
+            ))}
           </div>
 
           <div>

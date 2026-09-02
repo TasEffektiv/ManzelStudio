@@ -182,26 +182,123 @@ export const whyChoose = [
   },
 ];
 
+export const googleReviewsUrl = "https://share.google/afnXZiCTlMtqi7pbl";
+
 export const testimonials = [
   {
     quote:
-      "We have been working with Manzel Studio for many years — they are a hidden gem in the design industry as they offer an efficient service and competitive price. The work is very high quality and we will continue working with them for years to come.",
-    name: "Ayden Frigerio",
-    role: "Property Owner",
+      "Appointing Ahmed, Ali, and Rukaya at Manzel Studio has been a great decision. They've helped us get our residential project building permit ready by handling the full set of drawings, coordinating with consultants, and designing the joinery for both wet and dry areas. What we really appreciated was their construction background. Instead of a standard architectural design that looks nice on paper but gets expensive and tricky to build, they actually designed things to fit our budget and keep construction costs manageable. They can handle complex briefs easily, and nothing feels too daunting for them. They're patient, pay attention to the details, and are a pleasure to work with. I would highly recommend them to anyone looking for reliable building designers.",
+    name: "Abdul Rahim",
+    role: "Google Review",
   },
   {
     quote:
-      "Manzel Studio has exceeded my expectations and restored my faith in the industry. They listened to the brief and really enhanced the end design. Finally, a non-generic building design firm that goes beyond the norm. Great job — many thanks.",
+      "Ali and the team at Manzel Studio were a pleasure to work with. They designed a beautiful health clinic space and were able to bring my rough vision to thoughtful fruition. They made exceptional use of the space, helping me with configuration, layout, design and were expertly able to guide me through the complicated regulatory and compliance requirements for commercial healthcare spaces.",
+    name: "Sebastian Spangenberg",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "Ali and the team did a fabulous job of designing a beautiful clinical space for us. They met and exceeded the brief, with prompt and professional communication throughout. Ali was also able to assist with regulatory and compliance factors that affect commercial health spaces.",
+    name: "Healthspan Osteopathy",
+    role: "Google Review",
+  },
+  {
+    quote: "Mazen did a great job on our build. Very professional and efficient. He was so easy to deal with.",
+    name: "Libby Powell",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "Ali was great to work with. He's thorough, clear, has great communication and meet all our expectations. Would highly recommend him.",
+    name: "Sylvia",
+    role: "Google Review",
+  },
+  {
+    quote: "In the name of God, and may God bless them... With utmost honesty and integrity, and that is enough.",
+    name: "Zaid Almarabeh",
+    role: "Google Review",
+  },
+  {
+    quote: "Best experience.",
+    name: "Ravneet Kaur",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "If there were 10 stars I will give it all to Ali Dirani. Very diligent and excellent follow-ups. He went more than the extra mile to accommodate and help me fix a problem. Most importantly, a very genuine person. It has been a journey and I will always be grateful for his dedication and assistance. Will definitely use his services again in the future. Thank you, Ali.",
+    name: "Victor Bernard",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "Firstly, let me start by thanking the team at Manzel Studio — they have exceeded my expectations and restored my faith in the industry. They understood and listened to the brief I had set out, and really enhanced the end design. I am so happy with the results, so is my partner. Finally, we have found a non-generic architecture firm that goes beyond the norm. Great job, many thanks!",
     name: "JMS Fencing",
-    role: "Commercial Property",
+    role: "Google Review",
   },
   {
     quote:
-      "Manzel Studio has a professional team, great service, clear communication, and delivered beautiful results. Highly recommend them to everyone, always.",
-    name: "Ali Mouhamad",
-    role: "Property Owner",
+      "Manzel Studio is the best architectural firm in town! Their team is professional, creative, and always delivers outstanding designs right on time. They're extremely reliable, easy to work with, and offer very affordable prices without compromising quality. If you're looking for a trustworthy and talented architectural team, I highly recommend Manzel Studio!",
+    name: "Louay Masri",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "Working with Manzel Studio Pty Ltd to design and build my home was an incredible experience from start to finish. The team took the time to truly understand my vision, lifestyle, and budget, and transformed my ideas into a home that is both functional and beautifully designed. Their attention to detail, creativity, and professionalism were outstanding throughout the entire process. From the initial concept drawings to the final build, they communicated clearly, solved challenges with innovative solutions, and ensured every element reflected my personal style. The end result is a home that feels uniquely mine — elegant, comfortable, and thoughtfully designed in every way. I couldn't be happier with the outcome and would highly recommend Manzel Studio Pty Ltd to anyone looking for an architect who combines design excellence with genuine care for their clients. I particularly loved working with Ahmed, the lead architect.",
+    name: "Wesam Al-Sudani",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "Great working with Ali, Ahmed and the team. Never a disappointing interaction and results-driven in all they do. Highly recommend these guys!",
+    name: "Fadi Sarkis",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "Ali designed a few homes that we've built. He had great attention to detail and responded promptly. Highly recommend Manzel Studio!",
+    name: "Yaarob Jaafar",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "Manzel Studio was great to work with. They really listened to my ideas and made the whole process easy and stress-free. The attention to detail was impressive, and they nailed the balance between style and function. If you want a team that cares and delivers amazing results, I highly recommend them.",
+    name: "A.",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "I'm excited to share my experience working with Ahmed on the architectural work of my investment home in Craigieburn. From our first meeting to the final design, he demonstrated great creativity and professionalism. Ahmed took the time to understand my vision and needs, and his attention to detail and budgeting advice were invaluable. Communication was easy — he kept me updated and was always open to my feedback. The final result exceeded my expectations. I highly recommend Ahmed and his team to anyone looking for a talented architect committed to outstanding results. He's currently working on my second investment property in Glenroy, and I can't wait to collaborate with him again to bring my vision to life! Thank you, Ahmed and team!",
+    name: "Fatima Al Rady",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "We have been working with Manzel Studio for many years — they are a hidden gem in the design industry, offering an efficient service and competitive price. The work is very high quality, and we will continue working with them for years to come.",
+    name: "Ayden Frigerio",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "Thank you, Ahmed and Ali! Amazing design and attention to detail. Absolutely highly recommend using these guys if you want awesome, honest, and reliable work!",
+    name: "Kelvin Ming",
+    role: "Google Review",
+  },
+  {
+    quote:
+      "I had Manzel take care of my architectural work on two of my projects and the service was exceptional. They answered all my questions and requests, and I would definitely go back to them. Highly recommend!",
+    name: "Dean Yazxhi",
+    role: "Google Review",
   },
 ];
+
+// ===== Testimonials page =====
+
+export const testimonialsHero = {
+  image: img("/template/c0173968/images/Banner-Img2.png"),
+  title: "Testimonials",
+  tagline: "What our clients say about working with us",
+};
 
 export type BlogPost = {
   title: string;

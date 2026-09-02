@@ -2,18 +2,26 @@ import Image from "next/image";
 import { teamMembers } from "@/lib/content";
 import Reveal from "./Reveal";
 
-export default function ContactTeam() {
+export default function ContactTeam({
+  showHeading = true,
+  compact = false,
+}: {
+  showHeading?: boolean;
+  compact?: boolean;
+}) {
   return (
-    <section className="bg-white px-6 pb-[80px] pt-[100px] md:pb-[135px]">
+    <section className={`bg-white px-6 pb-[80px] md:pb-[135px] ${compact ? "pt-10" : "pt-[100px]"}`}>
       <div className="mx-auto max-w-[1200px] text-center">
-        <Reveal>
-          <h2 className="mx-auto mb-[60px] max-w-[890px] text-[30px] font-medium leading-[1.15] tracking-[-0.044em] text-black sm:text-[46px] md:mb-20 md:text-[62px] md:leading-[77px]">
-            Let&rsquo;s create an unforgettable experiences together.
-          </h2>
-        </Reveal>
+        {showHeading && (
+          <Reveal>
+            <h2 className="mx-auto mb-[60px] max-w-[890px] text-[30px] font-medium leading-[1.15] tracking-[-0.044em] text-black sm:text-[46px] md:mb-20 md:text-[62px] md:leading-[77px]">
+              Let&rsquo;s create an unforgettable experiences together.
+            </h2>
+          </Reveal>
+        )}
 
         <Reveal delay={100}>
-          <div className="flex flex-wrap justify-center gap-10 md:gap-[100px]">
+          <div className="mx-auto flex max-w-[260px] flex-col items-start gap-8 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-10 md:gap-[100px]">
             {teamMembers.map((m) => (
               <div key={m.name} className="flex items-center gap-5">
                 <div className="relative h-[60px] w-[60px] shrink-0 overflow-hidden rounded-full">
