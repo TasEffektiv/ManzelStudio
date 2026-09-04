@@ -15,7 +15,7 @@ export function renderRich(text: string): ReactNode[] {
       isInternal ? (
         <Link
           key={key++}
-          href={href.replace(/^https?:\/\/(www\.)?manzelstudio\.com/, "") || "/"}
+          href={href.replace(/^https?:\/\/(www\.)?manzelstudio\.com(\.au)?/, "") || "/"}
           className="underline underline-offset-2 hover:opacity-70"
         >
           {label}

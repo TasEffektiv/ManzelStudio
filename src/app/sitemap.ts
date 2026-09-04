@@ -12,6 +12,7 @@ const staticRoutes = [
   "/our-projects",
   "/project-coburg-the-avenue",
   "/contact-us",
+  "/testimonials",
   "/blog",
 ];
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://www.manzelstudio.com";
+export const SITE_URL = "https://www.manzelstudio.com.au";
 export const SITE_NAME = "Manzel Studio";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/images/hero/hero-1.png`;
 export const ORG_PHONE = "+61478162166";
