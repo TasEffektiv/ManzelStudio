@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         destination: "https://www.manzelstudio.com.au/:path*",
         statusCode: 301,
       },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "manzelstudio.netlify.app" }],
+        destination: "https://www.manzelstudio.com.au/:path*",
+        statusCode: 301,
+      },
     ];
   },
   images: {

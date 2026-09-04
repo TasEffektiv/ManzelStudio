@@ -76,7 +76,7 @@ export const sectors = [
       "We specialise in designing homes that reflect your lifestyle and values. From thoughtful spatial planning and natural light optimisation to selecting finishes that bring warmth and character, our residential approach balances aesthetics with everyday functionality.",
       "Whether you're building new or undertaking a major remodel, we guide you through each design phase, ensuring the outcome is tailored to how you live, not just how it looks.",
     ],
-    href: "/residential-building-design/",
+    href: "/residential-building-design",
   },
   {
     title: "Commercial",
@@ -85,7 +85,7 @@ export const sectors = [
       "In the commercial sector, our focus is on creating spaces that support business goals — whether that's boosting employee productivity, elevating your brand, or adapting to evolving usage patterns. We deliver custom solutions that integrate smart spatial design, efficient flow, and future-proof flexibility.",
       "From offices and retail fit-outs to mixed-use developments, our designs aim to be both striking and sustainable, enabling your business space to adapt over time.",
     ],
-    href: "/commercial-building-design/",
+    href: "/commercial-building-design",
   },
   {
     title: "Health Spaces",
