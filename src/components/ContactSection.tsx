@@ -209,7 +209,9 @@ export default function ContactSection({
 
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                   <div>
-                    <label className="mb-1.5 block text-[13px] font-medium text-ink-2">First Name</label>
+                    <label className="mb-1.5 block text-[13px] font-medium text-ink-2">
+                      First Name <span className="text-red-600">*</span>
+                    </label>
                     <input
                       required
                       type="text"
@@ -221,7 +223,9 @@ export default function ContactSection({
                     />
                   </div>
                   <div>
-                    <label className="mb-1.5 block text-[13px] font-medium text-ink-2">Last Name</label>
+                    <label className="mb-1.5 block text-[13px] font-medium text-ink-2">
+                      Last Name <span className="text-red-600">*</span>
+                    </label>
                     <input
                       required
                       type="text"
@@ -235,7 +239,9 @@ export default function ContactSection({
                 </div>
 
                 <div>
-                  <label className="mb-1.5 block text-[13px] font-medium text-ink-2">Email Address</label>
+                  <label className="mb-1.5 block text-[13px] font-medium text-ink-2">
+                    Email Address <span className="text-red-600">*</span>
+                  </label>
                   <input
                     required
                     type="email"
@@ -248,7 +254,9 @@ export default function ContactSection({
                 </div>
 
                 <div>
-                  <label className="mb-1.5 block text-[13px] font-medium text-ink-2">Phone Number</label>
+                  <label className="mb-1.5 block text-[13px] font-medium text-ink-2">
+                    Phone Number <span className="text-red-600">*</span>
+                  </label>
                   <input
                     required
                     type="tel"
@@ -286,7 +294,9 @@ export default function ContactSection({
                 </div>
 
                 <div>
-                  <label className="mb-1.5 block text-[13px] font-medium text-ink-2">Message</label>
+                  <label className="mb-1.5 block text-[13px] font-medium text-ink-2">
+                    Message <span className="text-red-600">*</span>
+                  </label>
                   <textarea
                     required
                     rows={4}
